@@ -1,0 +1,25 @@
+.portfolio-header {
+  text-align: center;
+  display: grid;
+  gap: 32px;
+}
+
+.portfolio-title {
+  font-size: 80px;
+  color: #725A58;
+}
+
+.portfolio-text {
+  font-size: 18px;
+}
+
+.portfolio-tabContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 16px;
+  max-width: 1022px;
+  width: 100%;
+}
+
+/*# sourceMappingURL=portfolio.css.map */
