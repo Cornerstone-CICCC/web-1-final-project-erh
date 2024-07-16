@@ -1,35 +1,56 @@
-@use "variables" as v;
-
 .portfolio-header {
   text-align: center;
   display: grid;
-  gap: 32px;
+  gap: 24px;
+  padding: 0 16px;
+
+  @include media('md') {
+    gap: 32px;
+  }
+
 }
 
 .portfolio-title {
-  font-size: v.$fontSize-h1-cap;
-  color: v.$bold-main-color;
+  font-size: $fontSize-h4-cap;
+  color: $bold-main-color;
   margin: 0 auto;
   position: relative;
+  font-family: "Baskervville", serif;
+  font-weight: 400;
+
+  @include media('md') {
+    font-size: $fontSize-h1-cap;
+  }
 
   &:after {
     content: '';
     display: inline-block;
     position: absolute;
-    bottom: 0;
+    bottom: -16px;
     left: 25%;
     width: 50%;
     height: 1px;
-    background-color: v.$accent-color;
+    background-color: $accent-color;
+
+    @include media('md') {
+      bottom: -18px;
+      left: 25%;  
+    }
+
   }
 }
 
 .portfolio-text {
-  font-size: v.$fontSize-body;
+  font-size: $fontSize-body-sm;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  @include media('md') {
+    font-size: $fontSize-body;
+  }
 }
 
 .portfolio-contentsContainer {
-  background-color: v.$light-pink-color;
+  background-color: $light-pink-color;
   width: 100%;
 }
 
@@ -46,28 +67,52 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  max-width: 1022px;
   width: 100%;
+  padding: 0 20px;
+  @include media('md') {
+    max-width: 1022px;
+    width: 100%;
+  }
 }
 
 .portfolio-tabItem {
-  color: v.$black-color;
+  color: $black-color;
   opacity: 0.4;
   order:-1;
-  padding: 0 64px 12px;
-  border-bottom: 1px solid v.$brand-color;
-  width: 242px;
-  font-size: v.$fontSize-h5;
+  padding: 0 32px 16px;
+  border-bottom: 1px solid $brand-color;
+  width: 25%;
+  font-size: $fontSize-h6;
   text-align: center;
-  margin-bottom: 43px;
+  margin-bottom: 24px;
+  font-family: "Baskervville", serif;
+  cursor: pointer;
+  transition: all, 0.3s;
+  &:hover {
+    opacity: 1;
+  }
+  @include media('md') {
+    width: 242px;
+    padding: 0 64px 12px;
+    font-size: $fontSize-h5;
+    margin-bottom: 43px;
+  }
 }
 
 .portfolio-content {
   width: 100%;
   display: none;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 16px;
+
+  @include media('md') {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+
+.portfolio-image {
+  width: 100%;
 }
 
 .portfolio-radio:checked+.portfolio-tabItem {
@@ -84,9 +129,9 @@
 
 .portfolio-button {
   margin-top: 60px;
-  font-size: v.$fontSize-button;
-  color: v.$brown-color;
+  font-size: $fontSize-button;
+  color: $brown-color;
   padding: 24px 32px;
-  border: 1px solid v.$brown-color;
-  background-color: v.$light-pink-color;
+  border: 1px solid $brown-color;
+  background-color: $light-pink-color;
 }
