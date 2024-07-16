@@ -44,8 +44,17 @@
   font-size: $fontSize-body-sm;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
+  margin-bottom: 40px;
   @include media('md') {
     font-size: $fontSize-body;
+    margin-bottom: 24px;
+  }
+}
+
+.portfolio-pconly {
+  display: none;
+  @include media('md') {
+    display: inline-block;
   }
 }
 
@@ -134,4 +143,5 @@
   padding: 24px 32px;
   border: 1px solid $brown-color;
   background-color: $light-pink-color;
+  font-family: "Baskervville", serif;
 }
