@@ -34,6 +34,7 @@ hr {
 }
 .container .inner-wrapper {
   max-width: 1024px;
+  margin: 0 auto;
 }
 
 .service-item {
@@ -77,6 +78,7 @@ hr {
 }
 .service-item .service-content .service-text .text-title {
   font-size: 24px;
+  margin-bottom: 14px;
 }
 .service-item .service-content button {
   width: 100%;
@@ -84,4 +86,29 @@ hr {
   font-size: 20px;
   background-color: #FAE9E7;
   border: 1px solid #725A58;
+}
+
+@media screen and (min-width: 767px) {
+  .container {
+    padding-top: 84px;
+    padding-bottom: 130px;
+  }
+  .service-item {
+    flex-direction: row;
+  }
+  .service-item .service-img {
+    width: 38%;
+  }
+  .service-item .service-content {
+    margin-left: 20px;
+  }
+  .service-item .service-content .service-info {
+    flex-direction: row;
+  }
+  .service-item .service-content .service-info div {
+    margin-right: 14px;
+  }
+  .service-item .service-content button {
+    width: 170px;
+  }
 }/*# sourceMappingURL=service.css.map */
