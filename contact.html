@@ -41,15 +41,15 @@
               <p class="contact-formitem__title">Event Type</p>
               <div class="contact-checkboxwrapper">
                 <label class="contact-checkbox">
-                  <input class="contact-checkbox__input" type="checkbox" name="eventType" value="wedding" checked>
+                  <input class="contact-checkbox__input" type="radio" name="eventType" value="wedding" checked>
                   <span class="contact-checkbox__title">Wedding</span>
                 </label>
                 <label class="contact-checkbox">
-                  <input class="contact-checkbox__input" type="checkbox" name="eventType" value="party">
+                  <input class="contact-checkbox__input" type="radio" name="eventType" value="party">
                   <span class="contact-checkbox__title">Party</span>
                 </label>
                 <label class="contact-checkbox">
-                  <input  class="contact-checkbox__input" type="checkbox" name="eventType" value="photoshoot">
+                  <input  class="contact-checkbox__input" type="radio" name="eventType" value="photoshoot">
                   <span class="contact-checkbox__title">Photoshoot</span>
                 </label>
               </div>
@@ -57,78 +57,82 @@
   
             <div class="contact-formitem">
               <p class="contact-formitem__title">Event Date</p>
-              <div>
-                <input type="date" name="dob" id="dob" placeholder="Select Date">
-                <label>
-                  <input type="checkbox">
-                  <span>Not decided</span>
+              <div class="contact-formitem">
+                <input type="date" name="dob" id="dob" placeholder="Select Date" class="contact-forminput">
+                <label class="contact-simplecheckboxwrapper">
+                  <input type="checkbox" class="contact-simplecheckbox">
+                  <span class="contact-simplecheckbox__text">Not decided</span>
                 </label>
               </div>
             </div>
   
             <div class="contact-formitem">
               <p class="contact-formitem__title">Event Time</p>
-              <div>
-                <select name="eventTime" id="eventTime">
+              <div class="contact-formitem">
+                <select name="eventTime" id="eventTime" class="contact-selectbox">
                   <option value="Full day" selected>Full day</option>
                   <option value="Evening">Evening</option>
                   <option value="Midnight">Midnight</option>
                 </select>
-                <label>
-                  <input type="checkbox">
-                  <span>Not decided</span>
+                <label class="contact-simplecheckboxwrapper">
+                  <input type="checkbox" class="contact-simplecheckbox">
+                  <span class="contact-simplecheckbox__text">Not decided</span>
                 </label>
               </div>
             </div>
   
             <label for="name" class="contact-formitem">
               <span class="contact-formitem__title">Name</span>
-              <input type="text" name="name" id="name" placeholder="Your name">
+              <input type="text" name="name" id="name" placeholder="Your name" class="contact-input">
             </label>
   
             <div class="contact-formitem">
               <p class="contact-formitem__title">Contact</p>
-              <label class="radio">
-                <span>Call</span>
-                <input type="radio" name="contact" value="call" checked="">
-                <select name="country" id="country">
-                  <option value="+1" selected>+1</option>
-                  <option value="+2">+2</option>
-                  <option value="+3">+3</option>
-                </select>
-                <input type="tel" placeholder="Your mobile number">
+              <label class="contact-radiowrapper">
+                <div class="contact-radio__call">
+                  <input type="radio" name="contact" value="call" checked="" class="contact-radio">
+                  <span class="contact-radio__text title">Call</span>
+                </div>
+                <div class="contact-callinput">
+                  <select name="country" id="country" class="contact-callinput__country">
+                    <option value="+1" selected>+1</option>
+                    <option value="+2">+2</option>
+                    <option value="+3">+3</option>
+                  </select>
+                  <input type="tel" placeholder="Your mobile number" class="contact-callinput__tel">
+                </div>
               </label>
-              <label class="radio">
-                <span>WhatsApp</span>
-                <input type="radio" name="contact" value="whatsApp" checked="">
+              <label class="contact-radiowrapper">
+                <input type="radio" name="contact" value="whatsApp" checked="" class="contact-radio">
+                <span class="contact-radio__text">WhatsApp</span>
               </label>
-              <label class="radio">
-                <span>SMS</span>
-                <input type="radio" name="contact" value="sms" checked="">
+              <label class="contact-radiowrapper">
+                <input type="radio" name="contact" value="sms" checked="" class="contact-radio">
+                <span class="contact-radio__text">SMS</span>
               </label>
-              <label class="radio">
-                <span>Email</span>
-                <input type="radio" name="contact" value="email" checked="">
+              <label class="contact-radiowrapper">
+                <input type="radio" name="contact" value="email" checked="" class="contact-radio">
+                <span class="contact-radio__text">Email</span>
               </label>
             </div>
   
             <div class="contact-formitem">
               <p class="contact-formitem__title">When do you want us to call?</p>
-              <label class="radio">
-                <span>I don’t mind</span>
-                <input type="radio" name="callTime" value="I don’t mind" checked="">
+              <label class="contact-radiowrapper">
+                <input type="radio" name="callTime" value="I don’t mind" checked="" class="contact-radio">
+                <span class="contact-radio__text">I don’t mind</span>
               </label>
-              <label class="radio">
-                <span>Morning</span>
-                <input type="radio" name="callTime" value="Morning" checked="">
+              <label class="contact-radiowrapper">
+                <input type="radio" name="callTime" value="Morning" checked="" class="contact-radio">
+                <span class="contact-radio__text">Morning</span>
               </label>
-              <label class="radio">
-                <span>Afternoon</span>
-                <input type="radio" name="callTime" value="Afternoon" checked="">
+              <label class="contact-radiowrapper">
+                <input type="radio" name="callTime" value="Afternoon" checked="" class="contact-radio">
+                <span class="contact-radio__text">Afternoon</span>
               </label>
-              <label class="radio">
-                <span>Evening</span>
-                <input type="radio" name="callTime" value="Evening" checked="">
+              <label class="contact-radiowrapper">
+                <input type="radio" name="callTime" value="Evening" checked="" class="contact-radio">
+                <span class="contact-radio__text">Evening</span>
               </label>
             </div>
           </div>
@@ -154,9 +158,9 @@
                 <span>Event Location</span>
                 <input type="text" placeholder="Search address">
               </label>
-              <label>
-                <input type="checkbox">
-                <span>Not decided</span>
+              <label class="contact-simplecheckboxwrapper">
+                <input type="checkbox" class="contact-simplecheckbox">
+                <span class="contact-simplecheckbox__text">Not decided</span>
               </label>
             </div>
             
