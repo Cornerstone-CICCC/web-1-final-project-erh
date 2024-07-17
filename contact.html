@@ -81,7 +81,7 @@
               </div>
             </div>
   
-            <label for="name" class="contact-formitem">
+            <label class="contact-formitem">
               <span class="contact-formitem__title">Name</span>
               <input type="text" name="name" id="name" placeholder="Your name" class="contact-input">
             </label>
@@ -142,21 +142,25 @@
             <button>Back</button>
 
             <div class="contact-formitem">
-              <p>Bridal Service</p>
-              <label>
-                <span>Makeup</span>
-                <input type="checkbox">
-              </label>
-              <label>
-                <span>Hairstyle</span>
-                <input type="checkbox">
-              </label>
+              <p class="contact-formitem__title">Bridal Service</p>
+              <div class="contact-checkboxwrapper">
+                <label class="contact-checkbox">
+                  <input class="contact-checkbox__input" type="checkbox" name="BridalService" value="makeup" checked>
+                  <span class="contact-checkbox__title">Makeup</span>
+                </label>
+                <label class="contact-checkbox">
+                  <input class="contact-checkbox__input" type="checkbox" name="BridalService" value="hairstyle">
+                  <span class="contact-checkbox__title">Hairstyle</span>
+                </label>
+              </div>
             </div>
             
             <div class="contact-formitem">
-              <label>
-                <span>Event Location</span>
-                <input type="text" placeholder="Search address">
+              <label class="contact-formitem">
+                <span class="contact-formitem__title">Event Location</span>
+                <div class="contact-searchinput">
+                  <input type="text" name="name" id="name" placeholder="Search address" class="contact-input">
+                </div>
               </label>
               <label class="contact-simplecheckboxwrapper">
                 <input type="checkbox" class="contact-simplecheckbox">
@@ -165,39 +169,39 @@
             </div>
             
             <div class="contact-formitem">
-              <p>Premium service</p>
-              <div>
-                <label>
-                  <input type="checkbox">
-                  <span>Deep skin cleansing</span>
+              <p class="contact-formitem__title">Premium service</p>
+              <div class="contact-simplecheckboxcontainer">
+                <label class="contact-simplecheckboxwrapper">
+                  <input type="checkbox" class="contact-simplecheckbox">
+                  <span class="contact-simplecheckbox__text">Deep skin cleansing</span>
                 </label>
-                <label>
-                  <input type="checkbox">
-                  <span>Bleach body hair</span>
+                <label class="contact-simplecheckboxwrapper">
+                  <input type="checkbox" class="contact-simplecheckbox">
+                  <span class="contact-simplecheckbox__text">Bleach body hair</span>
                 </label>
-                <label>
-                  <input type="checkbox">
-                  <span>Hydromassage</span>
+                <label class="contact-simplecheckboxwrapper">
+                  <input type="checkbox" class="contact-simplecheckbox">
+                  <span class="contact-simplecheckbox__text">Hydromassage</span>
                 </label>
-                <label>
-                  <input type="checkbox">
-                  <span>Hair Moisture</span>
+                <label class="contact-simplecheckboxwrapper">
+                  <input type="checkbox" class="contact-simplecheckbox">
+                  <span class="contact-simplecheckbox__text">Hair Moisture</span>
                 </label>
-                <label>
-                  <input type="checkbox">
-                  <span>Waxing</span>
+                <label class="contact-simplecheckboxwrapper">
+                  <input type="checkbox" class="contact-simplecheckbox">
+                  <span class="contact-simplecheckbox__text">Waxing</span>
                 </label>
-                <label>
-                  <input type="checkbox">
-                  <span>Foot and hand SPA</span>
+                <label class="contact-simplecheckboxwrapper">
+                  <input type="checkbox" class="contact-simplecheckbox">
+                  <span class="contact-simplecheckbox__text">Foot and hand SPA</span>
                 </label>
-                <label>
-                  <input type="checkbox">
-                  <span>Relaxing massage</span>
+                <label class="contact-simplecheckboxwrapper">
+                  <input type="checkbox" class="contact-simplecheckbox">
+                  <span class="contact-simplecheckbox__text">Relaxing massage</span>
                 </label>
-                <label>
-                  <input type="checkbox">
-                  <span>Gommage (body exfoliation and hydration)</span>
+                <label class="contact-simplecheckboxwrapper">
+                  <input type="checkbox" class="contact-simplecheckbox">
+                  <span class="contact-simplecheckbox__text">Gommage (body exfoliation and hydration)</span>
                 </label>
               </div>
             </div>
@@ -206,90 +210,100 @@
               <p class="contact-formitem__title">Anyone else need service?</p>
 
               <!-- Wedding -->
-              <div>
-                <p>Groom</p>
-                <div class="field">
-                  <button class="button" id="down">－</button>
-                  <input type="text" value="0" class="inputtext" id="textbox">
-                  <button class="button" id="up">＋</button>
+              <div class="contact-person">
+                <div class="contact-person__header">
+                  <p class="contact-subtitle">Groom</p>
+                  <div class="contact-countwrapper">
+                    <button class="contact-count" id="down">－</button>
+                    <input type="text" value="0" class="contact-countinput" id="textbox">
+                    <button class="contact-count" id="up">＋</button>
+                  </div>
                 </div>
                 <div>
-                  <label>
-                    <input type="checkbox">
-                    <span>Makeup</span>
+                  <label class="contact-simplecheckboxwrapper">
+                    <input type="checkbox" class="contact-simplecheckbox">
+                    <span class="contact-simplecheckbox__text">Makeup</span>
                   </label>
                 </div>
               </div>
 
-              <div>
-                <p>Bridesmaid</p>
-                <div class="field">
-                  <button class="button" id="down">－</button>
-                  <input type="text" value="0" class="inputtext" id="textbox">
-                  <button class="button" id="up">＋</button>
+              <div class="contact-person">
+                <div class="contact-person__header">
+                  <p class="contact-subtitle">Bridesmaid</p>
+                  <div class="contact-countwrapper">
+                    <button class="contact-count" id="down">－</button>
+                    <input type="text" value="0" class="contact-countinput" id="textbox">
+                    <button class="contact-count" id="up">＋</button>
+                  </div>
                 </div>
                 <div>
-                  <label>
-                    <input type="checkbox">
-                    <span>Hairstyle</span>
+                  <label class="contact-simplecheckboxwrapper">
+                    <input type="checkbox" class="contact-simplecheckbox">
+                    <span class="contact-simplecheckbox__text">Hairstyle</span>
                   </label>
-                  <label>
-                    <input type="checkbox">
-                    <span>Makeup</span>
+                  <label class="contact-simplecheckboxwrapper">
+                    <input type="checkbox" class="contact-simplecheckbox">
+                    <span class="contact-simplecheckbox__text">Makeup</span>
                   </label>
                 </div>
               </div>
 
-              <div>
-                <p>Flower girl</p>
-                <div class="field">
-                  <button class="button" id="down">－</button>
-                  <input type="text" value="0" class="inputtext" id="textbox">
-                  <button class="button" id="up">＋</button>
+              <div class="contact-person">
+                <div class="contact-person__header">
+                  <p class="contact-subtitle">Flower girl</p>
+                  <div class="contact-countwrapper">
+                    <button class="contact-count" id="down">－</button>
+                    <input type="text" value="0" class="contact-countinput" id="textbox">
+                    <button class="contact-count" id="up">＋</button>
+                  </div>
                 </div>
                 <div>
-                  <label>
-                    <input type="checkbox">
-                    <span>Hairstyle</span>
+                  <label class="contact-simplecheckboxwrapper">
+                    <input type="checkbox" class="contact-simplecheckbox">
+                    <span class="contact-simplecheckbox__text">Hairstyle</span>
                   </label>
-                  <label>
-                    <input type="checkbox">
-                    <span>Makeup</span>
+                  <label class="contact-simplecheckboxwrapper">
+                    <input type="checkbox" class="contact-simplecheckbox">
+                    <span class="contact-simplecheckbox__text">Makeup</span>
                   </label>
                 </div>
               </div>
               
               <!-- Party -->
-              <div>
-                <p>Woman</p>
-                <div class="field">
-                  <button class="button" id="down">－</button>
-                  <input type="text" value="0" class="inputtext" id="textbox">
-                  <button class="button" id="up">＋</button>
+              <div class="contact-person">
+                <div class="contact-person__header">
+                  <p class="contact-subtitle">Woman</p>
+                  <div class="contact-countwrapper">
+                    <button class="contact-count" id="down">－</button>
+                    <input type="text" value="0" class="contact-countinput" id="textbox">
+                    <button class="contact-count" id="up">＋</button>
+                  </div>
                 </div>
                 <div>
-                  <label>
-                    <input type="checkbox">
-                    <span>Hairstyle</span>
+                  <label class="contact-simplecheckboxwrapper">
+                    <input type="checkbox" class="contact-simplecheckbox">
+                    <span class="contact-simplecheckbox__text">Hairstyle</span>
                   </label>
-                  <label>
-                    <input type="checkbox">
-                    <span>Makeup</span>
+                  <label class="contact-simplecheckboxwrapper">
+                    <input type="checkbox" class="contact-simplecheckbox">
+                    <span class="contact-simplecheckbox__text">Makeup</span>
                   </label>
                 </div>
               </div>
 
-              <div>
-                <p>Man</p>
-                <div class="field">
-                  <button class="button" id="down">－</button>
-                  <input type="text" value="0" class="inputtext" id="textbox">
-                  <button class="button" id="up">＋</button>
+              <div class="contact-person">
+                <div class="contact-person__header">
+                  <p class="contact-subtitle">Man</p>
+                  <div class="contact-countwrapper">
+                    <button class="contact-count" id="down">－</button>
+                    <input type="text" value="0" class="contact-countinput" id="textbox">
+                    <button class="contact-count" id="up">＋</button>
+                  </div>
                 </div>
                 <div>
-                  <label>
-                    <input type="checkbox">
-                    <span>Makeup</span>
+                  <label class="contact-simplecheckboxwrapper">
+                    <input type="checkbox" class="contact-simplecheckbox">
+                    <span class="contact-simplecheckbox__text">Makeup</span>
                   </label>
                 </div>
               </div>

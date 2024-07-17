@@ -228,6 +228,26 @@
   border: 1px solid $bold-main-color;
 }
 
+.contact-searchinput {
+  position: relative;
+
+  .contact-input {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  &:after {
+    content: '';
+    display: inline-block;
+    background-image: url('../assets/contact/icon_search.svg');
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 16px;
+    top: 9px;
+  }
+
+}
+
 
 // simple checkbox (not decided)
 
@@ -240,7 +260,7 @@
     appearance: none;
     height: 22px;
     width: 22px;
-    background-color: $pale-white-color;
+    background-color: $paper-white-color;
     border: 1px solid $dark-pink-color;
 
     &__text {
@@ -262,7 +282,7 @@
     top: 1px;
     width: 6px;
     height: 12px;
-    border: solid $pale-white-color;
+    border: solid $paper-white-color;
     border-width: 0 3px 3px 0;
     transform: rotate(45deg);
   }
@@ -282,7 +302,7 @@
     width: 20px;
     border-radius: 50%;
     border: 1px solid $dark-pink-color;
-    background-color: $pale-white-color;
+    background-color: $paper-white-color;
 
     &__text {
       font-size: $fontSize-body;
@@ -320,7 +340,7 @@
 // call 
 .contact-callinput {
   border: 1px solid $bold-main-color;
-  background-color: $pale-white-color;
+  background-color: $paper-white-color;
   width: 100%;
   display: flex;
   gap: 0;
@@ -328,13 +348,62 @@
   &__country {
     padding: 12px 16px;
     border: none;
-    background-color: $pale-white-color;
+    background-color: $paper-white-color;
   }
 
   &__tel {
     padding: 12px 16px;
     border: none;
-    background-color: $pale-white-color;
+    background-color: $paper-white-color;
     width: 100%;
   }
+}
+
+.contact-simplecheckboxcontainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  @include media('md') {
+    flex-wrap: wrap;
+  }
+}
+
+// Anyone else need service?
+
+.contact-subtitle {
+  font-size: $fontSize-button;
+  font-family: "Baskervville", serif;
+  margin: 0;
+}
+
+.contact-person {
+  background-color: $paper-white-color;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.contact-countwrapper {
+  background-color: $light-pink-color;
+  padding: 8px;
+}
+
+.contact-count {
+  background-color: $light-pink-color;
+  border: none;
+}
+
+.contact-countinput {
+  border: none;
+  background-color: $light-pink-color;
+  width: 12px;
+  height: 12px;
+  font-size: $fontSize-body;
 }
