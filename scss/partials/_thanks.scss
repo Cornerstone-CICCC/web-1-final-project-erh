@@ -1,0 +1,145 @@
+.thanks-container {
+
+}
+
+.thanks-header {
+  &__title {
+    font-size: $fontSize-h4;
+    font-family: "Baskervville", serif;
+    margin: 0;
+    color: $bold-main-color;
+    font-weight: 400;
+    margin-bottom: 12px;
+
+    @include media('md') {
+      font-size: $fontSize-h3;
+    }
+  }
+
+  &__text {
+    font-size: $fontSize-body;
+    color: $brand-color;
+    margin: 0;
+    @include media('md') {
+      font-size: $fontSize-body-sm;
+    }
+  }
+}
+
+.thanks-wrapper {
+  margin-top: 40px;
+  border: 1px solid $brown-color;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  &__image {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+.thanks-estimate {
+  display: grid;
+  gap: 12px;
+
+  &__text {
+    font-size: $fontSize-body;
+    color: $brand-color;
+    margin: 0;
+    @include media('md') {
+      font-size: $fontSize-body-sm;
+    }
+  }
+
+  &__title {
+    font-size: $fontSize-h5;
+    margin: 0;
+    font-family: "Baskervville", serif;
+
+    @include media('md') {
+      font-size: $fontSize-h4-cap;
+    }
+  }
+}
+
+.thanks-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  @include media('md') {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.thanks-contentitem {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  &__wrapper {
+    display: grid;
+    gap: 40px;
+  }
+}
+
+.thnaks-subtitle {
+  font-size: $fontSize-h6;
+  font-family: "Baskervville", serif;
+  margin: 0;
+}
+
+.thanks-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  @include media('md') {
+    flex-direction: row-reverse;
+    align-items: end;
+    justify-content: space-between;
+    margin-top: 16px;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    justify-content: center;
+    @include media('md') {
+      align-items: flex-start;
+    }
+  }
+
+  &__image {
+    max-width: 70px;
+    width: 100%;
+
+    @include media('md') {
+      max-width: 96px;
+      width: 100%;
+    }
+  }
+  .contact-button {
+    margin-top: 0;
+    width: 100%;
+    @include media('md') {
+      height: fit-content;
+      width: 160px;
+    }
+  }
+}
+
+.thanks-sns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  .contact-sns:first-of-type {
+    @include media('md') {
+      display: none;
+    }
+  }
+}
