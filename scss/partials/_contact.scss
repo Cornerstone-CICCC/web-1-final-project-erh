@@ -157,6 +157,7 @@
 
 .contact-tabradio:checked + .contact-tabItem + .contact-content {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .contact-form {
@@ -382,11 +383,26 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+  @include media('md') {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
   &__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include media('md') {
+      padding-right: 24px;
+      border-right: 1px solid $accent-color;
+      width: 50%;
+    }
+  }
+
+  &__checkbox {
+    display: flex;
+    gap: 40px;
   }
 }
 
@@ -406,4 +422,20 @@
   width: 12px;
   height: 12px;
   font-size: $fontSize-body;
+}
+
+.contact-textarea {
+  border: none;
+  padding: 12px;
+}
+
+.contact-button {
+  margin-top: 60px;
+  font-size: $fontSize-button;
+  color: $brown-color;
+  padding: 24px 32px;
+  border: 1px solid $brown-color;
+  background-color: $light-pink-color;
+  font-family: "Baskervville", serif;
+  width: 160px;
 }
