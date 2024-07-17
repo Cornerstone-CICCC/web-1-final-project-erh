@@ -12,132 +12,144 @@
 </head>
 <body>
   <header>Header</header>
-  <section class="portfolio-header">
-    <h1 class="portfolio-title">CONTACT</h1>
-    <p class="portfolio-text">Get a quote and book a free consultation for your<br class="portfolio-pconly">special day or our academy services</p>
-    <div>
-      <div>
-        <img class="" src="./assets/contact/icon_phone.svg" alt="phone number">
-        <p>+1 0000000000</p>
+  <section class="contact-header">
+    <h1 class="contact-title">CONTACT</h1>
+    <p class="contact-text">Get a quote and book a free consultation for your<br class="contact-pconly">special day or our academy services</p>
+    <div class="contact-snswrapper">
+      <div class="contact-sns">
+        <img class="contact-sns__icon" src="./assets/contact/icon_phone.svg" alt="phone number">
+        <p class="contact-sns__text">+1 0000000000</p>
       </div>
-      <div>
-        <img class="" src="./assets/contact/icon_whatsapp.svg" alt="whatsapp">
-        <p>+1 0000000000</p>
+      <div class="contact-sns">
+        <img class="contact-sns__icon" src="./assets/contact/icon_whatsapp.svg" alt="whatsapp">
+        <p class="contact-sns__text">+1 0000000000</p>
       </div>
-      <div>
-        <img class="" src="./assets/contact/icon_instagram.svg" alt="instagram">
-        <p>carlabeatrizs_</p>
+      <div class="contact-sns">
+        <img class="contact-sns__icon" src="./assets/contact/icon_instagram.svg" alt="instagram">
+        <p class="contact-sns__text">carlabeatrizs_</p>
       </div>
     </div>
   </section>
-  <section>
-    <div class="tab-wrap portfolio-tabContainer">
-      <input id="services" type="radio" name="tab_item" class="portfolio-radio" checked="checked" /><label class="portfolio-tabItem" for="services">Services</label>
-      <div class="portfolio-content">
-        <form action="contact.html" method="get">
+  <section class="contact-container">
+    <div class="contact-tabContainer">
+      <input id="services" type="radio" name="tab_item" class="contact-tabradio" checked="checked" /><label class="contact-tabItem" for="services">Services</label>
+      <div class="contact-content">
+        <form action="contact.html" method="get" class="contact-form">
           <!-- First form section -->
-          <div>
-            <p>Event Type</p>
-            <div>
-              <label>
-                <span>Wedding</span>
-                <input type="checkbox" name="eventType" value="wedding" checked="">
-              </label>
-              <label>
-                <span>Party</span>
-                <input type="checkbox" name="eventType" value="party" checked="">
-              </label>
-              <label>
-                <span>Photoshoot</span>
-                <input type="checkbox" name="eventType" value="photoshoot" checked="">
-              </label>
+          <div class="contact-formcontent">
+            <div class="contact-formitem">
+              <p class="contact-formitem__title">Event Type</p>
+              <div class="contact-checkboxwrapper">
+                <label class="contact-checkbox">
+                  <input class="contact-checkbox__input" type="checkbox" name="eventType" value="wedding" checked>
+                  <span class="contact-checkbox__title">Wedding</span>
+                </label>
+                <label class="contact-checkbox">
+                  <input class="contact-checkbox__input" type="checkbox" name="eventType" value="party">
+                  <span class="contact-checkbox__title">Party</span>
+                </label>
+                <label class="contact-checkbox">
+                  <input  class="contact-checkbox__input" type="checkbox" name="eventType" value="photoshoot">
+                  <span class="contact-checkbox__title">Photoshoot</span>
+                </label>
+              </div>
             </div>
   
-            <p>Event Date</p>
-            <div>
-              <input type="date" name="dob" id="dob" placeholder="Select Date">
-              <label>
-                <input type="checkbox">
-                <span>Not decided</span>
-              </label>
+            <div class="contact-formitem">
+              <p class="contact-formitem__title">Event Date</p>
+              <div>
+                <input type="date" name="dob" id="dob" placeholder="Select Date">
+                <label>
+                  <input type="checkbox">
+                  <span>Not decided</span>
+                </label>
+              </div>
             </div>
   
-            <p>Event Time</p>
-            <div>
-              <select name="eventTime" id="eventTime">
-                <option value="Full day" selected>Full day</option>
-                <option value="Evening">Evening</option>
-                <option value="Midnight">Midnight</option>
-              </select>
-              <label>
-                <input type="checkbox">
-                <span>Not decided</span>
-              </label>
+            <div class="contact-formitem">
+              <p class="contact-formitem__title">Event Time</p>
+              <div>
+                <select name="eventTime" id="eventTime">
+                  <option value="Full day" selected>Full day</option>
+                  <option value="Evening">Evening</option>
+                  <option value="Midnight">Midnight</option>
+                </select>
+                <label>
+                  <input type="checkbox">
+                  <span>Not decided</span>
+                </label>
+              </div>
             </div>
   
-            <label for="name">
-              <span>Name</span>
+            <label for="name" class="contact-formitem">
+              <span class="contact-formitem__title">Name</span>
               <input type="text" name="name" id="name" placeholder="Your name">
             </label>
   
-            <p>Contact</p>
-            <label class="radio">
-              <span>Call</span>
-              <input type="radio" name="contact" value="call" checked="">
-              <select name="country" id="country">
-                <option value="+1" selected>+1</option>
-                <option value="+2">+2</option>
-                <option value="+3">+3</option>
-              </select>
-              <input type="tel" placeholder="Your mobile number">
-            </label>
-            <label class="radio">
-              <span>WhatsApp</span>
-              <input type="radio" name="contact" value="whatsApp" checked="">
-            </label>
-            <label class="radio">
-              <span>SMS</span>
-              <input type="radio" name="contact" value="sms" checked="">
-            </label>
-            <label class="radio">
-              <span>Email</span>
-              <input type="radio" name="contact" value="email" checked="">
-            </label>
+            <div class="contact-formitem">
+              <p class="contact-formitem__title">Contact</p>
+              <label class="radio">
+                <span>Call</span>
+                <input type="radio" name="contact" value="call" checked="">
+                <select name="country" id="country">
+                  <option value="+1" selected>+1</option>
+                  <option value="+2">+2</option>
+                  <option value="+3">+3</option>
+                </select>
+                <input type="tel" placeholder="Your mobile number">
+              </label>
+              <label class="radio">
+                <span>WhatsApp</span>
+                <input type="radio" name="contact" value="whatsApp" checked="">
+              </label>
+              <label class="radio">
+                <span>SMS</span>
+                <input type="radio" name="contact" value="sms" checked="">
+              </label>
+              <label class="radio">
+                <span>Email</span>
+                <input type="radio" name="contact" value="email" checked="">
+              </label>
+            </div>
   
-            <p>When do you want us to call?</p>
-            <label class="radio">
-              <span>I don’t mind</span>
-              <input type="radio" name="callTime" value="I don’t mind" checked="">
-            </label>
-            <label class="radio">
-              <span>Morning</span>
-              <input type="radio" name="callTime" value="Morning" checked="">
-            </label>
-            <label class="radio">
-              <span>Afternoon</span>
-              <input type="radio" name="callTime" value="Afternoon" checked="">
-            </label>
-            <label class="radio">
-              <span>Evening</span>
-              <input type="radio" name="callTime" value="Evening" checked="">
-            </label>
+            <div class="contact-formitem">
+              <p class="contact-formitem__title">When do you want us to call?</p>
+              <label class="radio">
+                <span>I don’t mind</span>
+                <input type="radio" name="callTime" value="I don’t mind" checked="">
+              </label>
+              <label class="radio">
+                <span>Morning</span>
+                <input type="radio" name="callTime" value="Morning" checked="">
+              </label>
+              <label class="radio">
+                <span>Afternoon</span>
+                <input type="radio" name="callTime" value="Afternoon" checked="">
+              </label>
+              <label class="radio">
+                <span>Evening</span>
+                <input type="radio" name="callTime" value="Evening" checked="">
+              </label>
+            </div>
           </div>
 
           <!-- Second form section -->
-           <div>
+           <div class="contact-formcontent">
             <button>Back</button>
 
-            <p>Bridal Service</p>
-            <label>
-              <span>Makeup</span>
-              <input type="checkbox">
-            </label>
-            <label>
-              <span>Hairstyle</span>
-              <input type="checkbox">
-            </label>
+            <div class="contact-formitem">
+              <p>Bridal Service</p>
+              <label>
+                <span>Makeup</span>
+                <input type="checkbox">
+              </label>
+              <label>
+                <span>Hairstyle</span>
+                <input type="checkbox">
+              </label>
+            </div>
             
-            <div>
+            <div class="contact-formitem">
               <label>
                 <span>Event Location</span>
                 <input type="text" placeholder="Search address">
@@ -148,7 +160,7 @@
               </label>
             </div>
             
-            <div>
+            <div class="contact-formitem">
               <p>Premium service</p>
               <div>
                 <label>
@@ -186,8 +198,8 @@
               </div>
             </div>
 
-            <div>
-              <p>Anyone else need service?</p>
+            <div class="contact-formitem">
+              <p class="contact-formitem__title">Anyone else need service?</p>
 
               <!-- Wedding -->
               <div>
@@ -280,8 +292,8 @@
 
             </div>
             
-            <label>
-              <span>Anything you want us to know?</span>
+            <label class="contact-formitem">
+              <span class="contact-formitem__title">Anything you want us to know?</span>
               <textarea name="message" id="" placeholder="Your message"></textarea>
             </label>
 
@@ -345,8 +357,8 @@
          </section>
 
       </div>
-      <input id="classes" type="radio" name="tab_item" class="portfolio-radio" /><label class="portfolio-tabItem" for="classes">Classes</label>
-      <div class="portfolio-content">
+      <input id="classes" type="radio" name="tab_item" class="contact-tabradio" /><label class="contact-tabItem" for="classes">Classes</label>
+      <div class="contact-content">
         <p>Nothing!</p>
       </div>
     </div>
