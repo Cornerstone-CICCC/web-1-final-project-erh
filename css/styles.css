@@ -166,6 +166,7 @@ body .about .container .signature button {
   width: 160px;
   border: 0.08px solid #535353;
   color: #535353;
+  transition: all 0.5s ease-in-out;
 }
 body .about .container .signature button:hover {
   background-color: #B99692;
@@ -234,6 +235,7 @@ body .work button {
   font-weight: 400;
   border: 0.8px solid #5E4A49;
   margin-bottom: 30px;
+  transition: all 0.5s ease-in-out;
 }
 body .work button:hover {
   background-color: #B99692;
@@ -314,6 +316,7 @@ body .makeup-and-hairstyle button {
   margin-bottom: 30px;
   width: 161px;
   color: #5E4A49;
+  transition: all 0.5s ease-in-out;
 }
 body .makeup-and-hairstyle button:hover {
   background-color: #B99692;
@@ -438,6 +441,7 @@ body .makeup101 .container .col1 button {
   width: 312px;
   border: 0.8px solid #5E4A49;
   color: #5E4A49;
+  transition: all 0.5s ease-in-out;
 }
 body .makeup101 .container .col1 button:hover {
   background-color: #B99692;
@@ -510,6 +514,7 @@ body .diy-beauty-corner button {
   margin-top: 30px;
   width: 206px;
   color: #5E4A49;
+  transition: all 0.5s ease-in-out;
 }
 body .diy-beauty-corner button:hover {
   background-color: #B99692;
@@ -562,18 +567,26 @@ body .lets-talk p {
     justify-content: end;
     align-items: end;
     width: 100%;
+    transition: all 1s linear;
   }
   body .main .message-menu .toggle-menu {
     position: absolute;
     bottom: 0;
     right: 0;
-    z-index: 2;
+    z-index: -1;
     opacity: 0%;
+    transition: all 0.3s linear;
+  }
+  body .main .message-menu .toggle-menu.open-menu {
+    opacity: 100%;
+    z-index: 1;
   }
   body .main .message-menu #message-logo {
     position: absolute;
     right: 0;
     bottom: 0;
+    opacity: 100%;
+    transition: all 0.3s linear;
   }
   body .main .message-menu:hover {
     cursor: pointer;
@@ -779,12 +792,13 @@ body .lets-talk p {
   body .diy-beauty-corner h2 {
     font-size: 48px;
     font-weight: 400;
+    padding-top: 50px;
   }
   body .diy-beauty-corner button {
     width: 222px;
     font-size: 20px;
     font-weight: 400;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
     margin-top: 50px;
   }
   body .diy-beauty-corner .carrousel {
@@ -798,6 +812,9 @@ body .lets-talk p {
   body .diy-beauty-corner .non-carrousel .gallery {
     display: flex;
     gap: 30px;
+  }
+  body .diy-beauty-corner .non-carrousel .gallery img {
+    transition: all 0.5s ease-in-out;
   }
   body .diy-beauty-corner .non-carrousel .gallery img:hover {
     cursor: pointer;
@@ -825,10 +842,11 @@ body .lets-talk p {
   }
   body .makeup-and-hairstyle .gallery #party {
     order: 1;
-    transition: all 5s linear;
+    transition: all 0.5s ease-in-out;
   }
   body .makeup-and-hairstyle .gallery #party img {
     width: 298px;
+    transition: all 0.5s ease-in-out;
   }
   body .makeup-and-hairstyle .gallery #party p {
     left: 28px;
@@ -840,6 +858,7 @@ body .lets-talk p {
   }
   body .makeup-and-hairstyle .gallery #party:hover img {
     width: 388px;
+    transition: all 0.5s ease-in-out;
   }
   body .makeup-and-hairstyle .gallery #party:hover .border {
     position: absolute;
@@ -853,10 +872,11 @@ body .lets-talk p {
   body .makeup-and-hairstyle .gallery #wedding {
     position: relative;
     order: 2;
+    transition: all 0.5s ease-in-out;
   }
   body .makeup-and-hairstyle .gallery #wedding img {
-    position: relative;
     width: 298px;
+    transition: all 0.5s ease-in-out;
   }
   body .makeup-and-hairstyle .gallery #wedding p {
     left: 52px;
@@ -868,6 +888,7 @@ body .lets-talk p {
   }
   body .makeup-and-hairstyle .gallery #wedding:hover img {
     width: 388px;
+    transition: all 0.5s ease-in-out;
   }
   body .makeup-and-hairstyle .gallery #wedding:hover .border {
     position: absolute;
@@ -880,9 +901,11 @@ body .lets-talk p {
   }
   body .makeup-and-hairstyle .gallery #photoshoot {
     order: 3;
+    transition: all 0.5s ease-in-out;
   }
   body .makeup-and-hairstyle .gallery #photoshoot img {
     width: 298px;
+    transition: all 0.5s ease-in-out;
   }
   body .makeup-and-hairstyle .gallery #photoshoot p {
     left: 85px;
@@ -894,6 +917,7 @@ body .lets-talk p {
   }
   body .makeup-and-hairstyle .gallery #photoshoot:hover img {
     width: 388px;
+    transition: all 0.5s ease-in-out;
   }
   body .makeup-and-hairstyle .gallery #photoshoot:hover .border {
     position: absolute;
@@ -911,13 +935,13 @@ body .lets-talk p {
 @media only screen and (min-width: 1200px) {
   body .about .container {
     margin-left: 0;
-    padding-right: 90px;
+    padding-right: 40px;
   }
   body .about .card {
-    margin-left: 270px;
+    margin-left: 130px;
   }
   body .about .container {
-    margin-right: 90px;
+    margin-right: 50px;
   }
   body .quote img {
     margin-top: 60px;
