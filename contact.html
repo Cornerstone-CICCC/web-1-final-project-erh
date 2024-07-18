@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/styles.css">
+  <script defer src="./js/index.js"></script>
 </head>
 <body>
   <header>Header</header>
@@ -36,7 +37,7 @@
       <div class="contact-content">
         <form action="contact.html" method="get" class="contact-form">
           <!-- First form section -->
-          <div class="contact-formcontent">
+          <div class="contact-formcontent js-first-form">
             <div class="contact-formitem">
               <p class="contact-formitem__title">Event Type</p>
               <div class="contact-checkboxwrapper three">
@@ -115,8 +116,10 @@
                 <span class="contact-radio__text">Email</span>
               </label>
             </div>
+
   
-            <div class="contact-formitem">
+            <!-- Wedding -->
+            <div class="contact-formitem js-wedding-form">
               <p class="contact-formitem__title">When do you want us to call?</p>
               <label class="contact-radiowrapper">
                 <input type="radio" name="callTime" value="I don’t mind" checked="" class="contact-radio">
@@ -138,8 +141,8 @@
           </div>
 
           <!-- Second form section -->
-           <div class="contact-formcontent">
-            <button class="contact-back">Back</button>
+          <div class="contact-formcontent js-second-form">
+            <button class="contact-back js-back-btn">Back</button>
 
             <div class="contact-formitem">
               <p class="contact-formitem__title">Bridal Service</p>
@@ -210,7 +213,7 @@
               <p class="contact-formitem__title">Anyone else need service?</p>
 
               <!-- Wedding -->
-              <div class="contact-person">
+              <div class="contact-person js-wedding-form">
                 <div class="contact-person__header">
                   <p class="contact-subtitle">Groom</p>
                   <div class="contact-countwrapper">
@@ -227,7 +230,7 @@
                 </div>
               </div>
 
-              <div class="contact-person">
+              <div class="contact-person js-wedding-form">
                 <div class="contact-person__header">
                   <p class="contact-subtitle">Bridesmaid</p>
                   <div class="contact-countwrapper">
@@ -248,7 +251,7 @@
                 </div>
               </div>
 
-              <div class="contact-person">
+              <div class="contact-person js-wedding-form">
                 <div class="contact-person__header">
                   <p class="contact-subtitle">Flower girl</p>
                   <div class="contact-countwrapper">
@@ -270,7 +273,7 @@
               </div>
               
               <!-- Party -->
-              <div class="contact-person">
+              <div class="contact-person js-party-form">
                 <div class="contact-person__header">
                   <p class="contact-subtitle">Woman</p>
                   <div class="contact-countwrapper">
@@ -291,7 +294,7 @@
                 </div>
               </div>
 
-              <div class="contact-person">
+              <div class="contact-person js-party-form">
                 <div class="contact-person__header">
                   <p class="contact-subtitle">Man</p>
                   <div class="contact-countwrapper">
@@ -316,9 +319,9 @@
             </label>
 
 
-           </div>
+          </div>
 
-          <button class="contact-button">Next</button>
+          <button class="contact-button js-next-btn">Next</button>
           <button type="submit" class="contact-button">Submit</button>
         </form>
 

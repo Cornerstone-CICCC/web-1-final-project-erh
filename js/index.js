@@ -1,94 +1,114 @@
-function changeEventType() {
-  const eventTypes = document.getElementsByName("eventType")
+const eventTypes = document.getElementsByName("eventType");
+const form = document.querySelector("form");
+const nextBtn = document.querySelector('.js-next-btn');
+const backBtn = document.querySelector('.js-next-btn');
 
-  let checkedType = ""
-  for (var i = 0; i < eventTypes.length; i++) {
-    if (eventTypes[i].checked) {
-      checkedType = eventTypes[i].value
-    }
-  }
+// Event type
+eventTypes.forEach(type => {
+  type.addEventListener('change', () => {
+    changeEventType(type.value)
+  })
+})
+
+function changeEventType(type) {
+  let checkedType = type;
 
   if (checkedType == "wedding") {
+
     // Show wedding form
-    document.getElementById("wedding-form").style.display= "block"
+    document.querySelector(".js-wedding-form").style.display = "block";
     // Hide other forms
-    document.getElementById("party-form").style.display= "none"
-    document.getElementById("photoshoot-form").style.display= "none"
+    document.querySelector(".js-party-form").style.display = "none";
+
   } else if (checkedType == "party") {
+
     // Show party form
-    document.getElementById("party-form").style.display= "block"
+    document.querySelector(".js-party-form").style.display = "block";
     // Hide other forms
-    document.getElementById("wedding-form").style.display= "none"
-    document.getElementById("photoshoot-form").style.display= "none"
+    document.querySelector(".js-wedding-form").style.display = "none";
+
   } else if (checkedType == "photoshoot") {
-    // Show photoshoot form
-    document.getElementById("photoshoot-form").style.display= "block"
+
     // Hide other forms
-    document.getElementById("party-form").style.display= "none"
-    document.getElementById("wedding-form").style.display= "none"
+    document.querySelector(".js-party-form").style.display = "none";
+    document.querySelector(".js-wedding-form").style.display = "none";
+
   }
 }
 
-function moveWeddingForm() {
+
+// change form
+function moveNextForm() {
   // Hide Current form
-  document.getElementById("wedding-form").style.display = "none"
+  document.querySelector(".js-first-form").style.display = "none";
   // Show Next form
-  document.getElementById("wedding-form-2").style.display = "block"
+  document.querySelector(".js-second-form").style.display = "block";
 }
 
-function movePartyForm() {
+function moveBackForm() {
   // Hide Current form
-  document.getElementById("party-form").style.display = "none"
+  document.querySelector(".js-first-form").style.display = "block";
   // Show Next form
-  document.getElementById("party-form-2").style.display = "block"
+  document.querySelector(".js-second-form").style.display = "none";
 }
 
-const form = document.querySelector('form')
 
-form.addEventListener("submit", (e) => {
+
+nextBtn.addEventListener('click', (e) => {
   e.preventDefault();
-  const formData = new FormData(form)
-
-  //Show Premium Service Data in the Page
-  const premiumServiceList = document.getElementById("premium-service-list")
-  const premiumServiceData = formData.getAll('premium-service')
-
-  for (let i = 0; i < premiumServiceData.length; i++) {
-    let li = document.createElement("li")
-    li.innerHTML = premiumServiceData[i]
-    premiumServiceList.appendChild(li)
-  }
-
-  //Show Additional Attendee Data in the Page
-  const additionalAttendeeList = document.getElementById("additional-attendee-list")
-
-  // Show Groom Data
-  const countGroom = formData.get('contact-countinput-groom')
-
-  if (countGroom != 0) {
-    let li = document.createElement("li")
-
-    let countText = ""
-    // Show Groom Amounts
-    if (countGroom > 1) {
-      countText = ` * ${countGroom}`
-    }
-
-    // Show Groom Options
-    const groomOptions = formData.getAll('groom-option')
-    let optionText = ""
-    if (groomOptions != []) {
-      for (let i = 0; i < groomOptions.length; i++) {
-        if (optionText == "") {
-          optionText = groomOptions[i]
-        } else {
-          optionText += ` + ${groomOptions[i]}`
-        }
-      }
-      optionText = ` (${optionText})`
-    }
-
-    li.innerText = `Groom${countText}${optionText}`
-    additionalAttendeeList.appendChild(li)
-  }
+  moveNextForm()
 })
+
+backBtn.addEventListener('click', () => {
+  moveBackForm()
+})
+
+// form.addEventListener("submit", (e) => {
+//   e.preventDefault();
+//   const formData = new FormData(form);
+
+//   //Show Premium Service Data in the Page
+//   const premiumServiceList = document.getElementById("premium-service-list");
+//   const premiumServiceData = formData.getAll("premium-service");
+
+//   for (let i = 0; i < premiumServiceData.length; i++) {
+//     let li = document.createElement("li");
+//     li.innerHTML = premiumServiceData[i];
+//     premiumServiceList.appendChild(li);
+//   }
+
+//   //Show Additional Attendee Data in the Page
+//   const additionalAttendeeList = document.getElementById(
+//     "additional-attendee-list"
+//   );
+
+//   // Show Groom Data
+//   const countGroom = formData.get("contact-countinput-groom");
+
+//   if (countGroom != 0) {
+//     let li = document.createElement("li");
+
+//     let countText = "";
+//     // Show Groom Amounts
+//     if (countGroom > 1) {
+//       countText = ` * ${countGroom}`;
+//     }
+
+//     // Show Groom Options
+//     const groomOptions = formData.getAll("groom-option");
+//     let optionText = "";
+//     if (groomOptions != []) {
+//       for (let i = 0; i < groomOptions.length; i++) {
+//         if (optionText == "") {
+//           optionText = groomOptions[i];
+//         } else {
+//           optionText += ` + ${groomOptions[i]}`;
+//         }
+//       }
+//       optionText = ` (${optionText})`;
+//     }
+
+//     li.innerText = `Groom${countText}${optionText}`;
+//     additionalAttendeeList.appendChild(li);
+//   }
+// });
