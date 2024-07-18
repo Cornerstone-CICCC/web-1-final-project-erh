@@ -13,6 +13,7 @@ body {
 
 .title {
   font-size: v.$fontSize-h4;
+  font-family: "Baskervville", serif;
   color: v.$accent-color;
   line-height: 48px;
   font-weight: 400;
@@ -23,6 +24,7 @@ body {
 
 .sub-title{
   font-size: v.$fontSize-h5;
+  font-family: "Baskervville", serif;
   color: v.$bold-main-color;
   font-weight: 400;
   letter-spacing: 0.4rem;
@@ -60,6 +62,7 @@ body {
 
     .about-name {
       font-size: v.$fontSize-h4;
+      font-family: "Baskervville", serif;
       line-height: 43px;
       font-weight: 400;
       margin: 0;
@@ -75,6 +78,7 @@ body {
       width: 170px;
       height: 64px;
       font-size: 20px;
+      font-family: "Baskervville", serif;
       background-color: v.$light-pink-color;
       border: 1px solid v.$bold-main-color;
       display: block;
@@ -87,9 +91,9 @@ body {
 
 .sub-title-brand{
   font-size: v.$fontSize-h5;
+  font-family: "Baskervville", serif;
   color: v.$bold-main-color;
   font-weight: 400;
-  letter-spacing: 0.2rem;
   margin-top: 24px;
 }
 
