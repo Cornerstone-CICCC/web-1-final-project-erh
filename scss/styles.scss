@@ -1,5 +1,7 @@
-@import "partials/_variables";
-@import "partials/_mixin";
+@import "./partials/_variables";
+@import "./partials/_mixin";
+
+@import "./_header";
 
 @import "service";
 @import "./about";
