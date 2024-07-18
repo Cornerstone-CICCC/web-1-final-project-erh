@@ -1,7 +1,12 @@
-@import "./partials/variables";
+
+@import "./partials/_variables";
+@import "./partials/_mixin";
+
+@import "./about";
+@import "./partials/portfolio";
 @import "./partials/home";
 
 body{
-    margin: 0; 
+    margin: 0;
     padding: 0;
 }
