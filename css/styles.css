@@ -5,6 +5,143 @@ class {
   }
 }
 */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  margin: 0 auto;
+  font-size: 18px;
+  text-align: center;
+}
+
+.title {
+  font-size: 36px;
+  font-family: "Baskervville", serif;
+  color: #E3B6B1;
+  line-height: 48px;
+  font-weight: 400;
+  letter-spacing: 0.4rem;
+  margin-top: 36px;
+  margin-bottom: 20px;
+}
+
+.sub-title {
+  font-size: 32px;
+  font-family: "Baskervville", serif;
+  color: #725A58;
+  font-weight: 400;
+  letter-spacing: 0.4rem;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+.container {
+  width: 100%;
+  background-color: #FAE9E7;
+}
+.container .inner-wrapper {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.about-item {
+  display: flex;
+  flex-direction: column;
+}
+.about-item .about-img {
+  width: 100%;
+}
+.about-item .about-img img {
+  width: 100%;
+}
+.about-item .about-content {
+  width: 100%;
+  padding: 16px 14px 36px;
+  text-align: left;
+  color: #725A58;
+}
+.about-item .about-content .about-name {
+  font-size: 36px;
+  font-family: "Baskervville", serif;
+  line-height: 43px;
+  font-weight: 400;
+  margin: 0;
+}
+.about-item .about-content .about-text {
+  margin-top: 16px;
+  margin-bottom: 24px;
+  line-height: 26px;
+}
+.about-item .about-content button {
+  width: 170px;
+  height: 64px;
+  font-size: 20px;
+  font-family: "Baskervville", serif;
+  background-color: #FAE9E7;
+  border: 1px solid #725A58;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  color: #725A58;
+}
+
+.sub-title-brand {
+  font-size: 32px;
+  font-family: "Baskervville", serif;
+  color: #725A58;
+  font-weight: 400;
+  margin-top: 24px;
+}
+
+.logo-img {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 46px;
+}
+
+.pc {
+  display: none !important;
+}
+
+.sp {
+  display: block !important;
+}
+
+@media screen and (min-width: 767px) {
+  .title {
+    font-size: 48px;
+    line-height: 1.5rem;
+  }
+  .sub-title {
+    font-size: 60px;
+    margin-top: 32px;
+  }
+  .container {
+    padding-top: 84px;
+    padding-bottom: 130px;
+  }
+  .about-item {
+    flex-direction: row;
+  }
+  .about-item .about-img {
+    width: 38%;
+  }
+  .about-item .about-content {
+    margin-left: 20px;
+  }
+  .about-item .about-content button {
+    margin-left: 0;
+    margin-right: auto;
+  }
+  .pc {
+    display: block !important;
+  }
+  .sp {
+    display: none !important;
+  }
+}
 .portfolio-header {
   text-align: center;
   display: grid;
@@ -799,6 +936,4 @@ class {
 body {
   margin: 0;
   padding: 0;
-}
-
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */
