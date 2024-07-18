@@ -1,67 +1,123 @@
 const eventTypes = document.getElementsByName("eventType");
+const wedding = document.querySelectorAll(".js-wedding-form");
+const party = document.querySelectorAll(".js-party-form");
+const nextBtn = document.querySelector(".js-next-btn");
+const backBtn = document.querySelector(".js-back-btn");
+const submitBtn = document.querySelector(".js-submit-btn");
+const firstForm = document.querySelector(".js-first-form");
+const secondForm = document.querySelector(".js-second-form");
 const form = document.querySelector("form");
-const nextBtn = document.querySelector('.js-next-btn');
-const backBtn = document.querySelector('.js-next-btn');
+const countWrappers = document.querySelectorAll('.contact-countwrapper')
+
+
 
 // Event type
-eventTypes.forEach(type => {
-  type.addEventListener('change', () => {
-    changeEventType(type.value)
-  })
-})
+eventTypes.forEach((type) => {
+  type.addEventListener("change", () => {
+    changeEventType(type.value);
+  });
+});
 
 function changeEventType(type) {
   let checkedType = type;
 
-  if (checkedType == "wedding") {
+  if (checkedType === "wedding") {
+    
+    wedding.forEach(section => {
+      section.style.display = "flex";
+    })
 
-    // Show wedding form
-    document.querySelector(".js-wedding-form").style.display = "block";
-    // Hide other forms
-    document.querySelector(".js-party-form").style.display = "none";
+    party.forEach(section => {
+      section.style.display = "none";
+    })
 
-  } else if (checkedType == "party") {
+    submitBtn.style.display = 'none';
+    nextBtn.style.display = 'inline-block';
 
-    // Show party form
-    document.querySelector(".js-party-form").style.display = "block";
-    // Hide other forms
-    document.querySelector(".js-wedding-form").style.display = "none";
+  } else if (checkedType === "party") {
 
-  } else if (checkedType == "photoshoot") {
+    party.forEach(section => {
+      section.style.display = "flex";
+    })
 
-    // Hide other forms
-    document.querySelector(".js-party-form").style.display = "none";
-    document.querySelector(".js-wedding-form").style.display = "none";
+    wedding.forEach(section => {
+      section.style.display = "none";
+    })
 
+    submitBtn.style.display = 'none';
+    nextBtn.style.display = 'inline-block';
+
+  } else if (checkedType === "photoshoot") {
+    wedding.forEach(section => {
+      section.style.display = "none";
+    })
+
+    party.forEach(section => {
+      section.style.display = "none";
+    })
+
+    nextBtn.style.display = 'none';
+    submitBtn.style.display = 'inline-block';
   }
 }
-
 
 // change form
 function moveNextForm() {
   // Hide Current form
-  document.querySelector(".js-first-form").style.display = "none";
+  firstForm.style.display = "none";
   // Show Next form
-  document.querySelector(".js-second-form").style.display = "block";
+  secondForm.style.display = "block";
 }
 
 function moveBackForm() {
   // Hide Current form
-  document.querySelector(".js-first-form").style.display = "block";
+  firstForm.style.display = "block";
   // Show Next form
-  document.querySelector(".js-second-form").style.display = "none";
+  secondForm.style.display = "none";
 }
 
-
-
-nextBtn.addEventListener('click', (e) => {
+nextBtn.addEventListener("click", (e) => {
   e.preventDefault();
-  moveNextForm()
+  moveNextForm();
+  nextBtn.style.display = 'none';
+  submitBtn.style.display = 'inline-block';
+});
+
+backBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  moveBackForm();
+  submitBtn.style.display = 'none';
+  nextBtn.style.display = 'inline-block';
+});
+
+// change button
+document.addEventListener("DOMContentLoaded", () => {
+  if (firstForm.style.display === "inline-block") {
+    nextBtn.style.display = "inline-block";
+  } else if (firstForm.style.display === "none") {
+    nextBtn.style.display = "none";
+  }
+});
+
+countWrappers.forEach(count => {
+
+  const downBtn = count.querySelector('.js-count-down');
+  const upBtn = count.querySelector('.js-count-up');
+  const countText = count.querySelector('.js-count-text');
+
+  downBtn.addEventListener('click', (e) => {
+    e.preventDefault()
+    if(countText.value >= 1) {
+      countText.value--;
+    }
+  });
+
+  upBtn.addEventListener('click', (e) => {
+    e.preventDefault()
+    countText.value++;
+  })
 })
 
-backBtn.addEventListener('click', () => {
-  moveBackForm()
-})
 
 // form.addEventListener("submit", (e) => {
 //   e.preventDefault();
