@@ -1,0 +1,154 @@
+@use "partials/variables" as v;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  margin: 0 auto;
+  font-size: v.$fontSize-body;
+  text-align: center;
+}
+
+.title {
+  font-size: v.$fontSize-h4;
+  font-family: "Baskervville", serif;
+  color: v.$accent-color;
+  line-height: 48px;
+  font-weight: 400;
+  letter-spacing: 0.4rem;
+  margin-top: 36px;
+  margin-bottom: 20px;
+}
+
+.sub-title{
+  font-size: v.$fontSize-h5;
+  font-family: "Baskervville", serif;
+  color: v.$bold-main-color;
+  font-weight: 400;
+  letter-spacing: 0.4rem;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+.container {
+  width: 100%;
+  background-color: v.$light-pink-color;
+
+  .inner-wrapper {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+}
+
+.about-item {
+  display: flex;
+  flex-direction: column;
+
+  .about-img {
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .about-content {
+    width: 100%;
+    padding: 16px 14px 36px;
+    text-align: left;
+    color: v.$bold-main-color;
+
+    .about-name {
+      font-size: v.$fontSize-h4;
+      font-family: "Baskervville", serif;
+      line-height: 43px;
+      font-weight: 400;
+      margin: 0;
+    }
+
+    .about-text {
+      margin-top: 16px;
+      margin-bottom: 24px;
+      line-height: 26px;
+    }
+
+    button {
+      width: 170px;
+      height: 64px;
+      font-size: 20px;
+      font-family: "Baskervville", serif;
+      background-color: v.$light-pink-color;
+      border: 1px solid v.$bold-main-color;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      color: v.$bold-main-color;
+    }
+  }
+}
+
+.sub-title-brand{
+  font-size: v.$fontSize-h5;
+  font-family: "Baskervville", serif;
+  color: v.$bold-main-color;
+  font-weight: 400;
+  margin-top: 24px;
+}
+
+.logo-img{
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 46px;
+}
+
+.pc {
+  display: none !important;
+}
+
+.sp {
+  display: block !important;
+}
+
+@media screen and (min-width: 767px) {
+  .title {
+    font-size: 48px;
+    line-height: 1.5rem;
+  }
+
+  .sub-title{
+    font-size: 60px;
+    margin-top: 32px;
+  }
+
+  .container {
+    padding-top: 84px;
+    padding-bottom: 130px;
+  }
+
+  .about-item {
+    flex-direction: row;
+
+    .about-img {
+      width: 38%;
+    }
+
+    .about-content {
+      margin-left: 20px;
+
+      button{
+        margin-left: 0;
+        margin-right: auto;
+      }
+    }
+  }
+
+  .pc {
+    display: block !important;
+  }
+
+  .sp {
+    display: none !important;
+  }
+}

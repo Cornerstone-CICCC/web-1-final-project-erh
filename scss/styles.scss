@@ -2,3 +2,12 @@
 @import "./partials/_mixin";
 
 @import "./_header";
+
+@import "service";
+@import "./about";
+@import "./partials/portfolio";
+
+body{
+    margin: 0;
+    padding: 0;
+}
