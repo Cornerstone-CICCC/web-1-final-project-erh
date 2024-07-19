@@ -1,0 +1,8 @@
+.link-wrapper {
+  display: flex;
+}
+
+.link-inner-wrapper {
+  display: flex;
+  flex-direction: column;
+}/*# sourceMappingURL=footer.css.map */

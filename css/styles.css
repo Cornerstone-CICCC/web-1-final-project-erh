@@ -11,7 +11,6 @@ class {
 
 body {
   margin: 0;
-  overflow: hidden;
 }
 
 .header {
@@ -130,6 +129,62 @@ body {
   display: none;
 }
 
+.footer-logo {
+  margin-bottom: 8px;
+}
+
+.footer-text {
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.sns-logo {
+  margin-bottom: 24px;
+}
+
+.link-wrapper {
+  width: 90%;
+  margin: 0 auto;
+  border-top: 1px solid #191919;
+  border-bottom: 1px solid #191919;
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.link-inner-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 50%;
+  height: 140px;
+  gap: 10px;
+}
+.link-inner-wrapper a {
+  text-decoration: none;
+  font-size: 20px;
+  font-family: "Baskervville", serif;
+  color: #725A58;
+}
+
+.copyright {
+  font-size: 14px;
+  color: #725A58;
+  margin-top: 20px;
+  margin-bottom: 32px;
+}
+
+@media (min-width: 768px) {
+  .link-inner-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 6%;
+    width: 80%;
+    height: auto;
+  }
+}
 * {
   box-sizing: border-box;
 }
