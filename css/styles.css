@@ -10,6 +10,258 @@ class {
 }
 
 body {
+  margin: 0;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #F8F6F4;
+  position: relative;
+}
+
+.menu-active {
+  flex-direction: column;
+}
+
+.menu-active .logo {
+  margin: 10px 0;
+}
+
+.header nav {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  align-items: center;
+}
+
+.header nav a {
+  color: #725A58;
+  text-decoration: none;
+  padding: 10px 10px;
+  text-align: center;
+  width: 100%;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.menu-toggle {
+  cursor: pointer;
+  display: block;
+  margin: 10px 0;
+}
+
+.menu-toggle span {
+  background-color: #725A58;
+  display: block;
+  height: 2px;
+  margin: 5px 0;
+  width: 25px;
+}
+
+.close-toggle {
+  display: none;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+  font-size: 32px;
+  color: #725A58;
+}
+
+@media (min-width: 768px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 10px;
+  }
+  .header .logo {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .header nav {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: auto;
+    align-items: center;
+  }
+  .header nav a {
+    border-right: 1px solid #E3B6B1;
+    font-size: 20px;
+  }
+  .header nav a:last-child {
+    border-right: none;
+  }
+  .menu-left {
+    flex: 1;
+    justify-content: flex-end;
+    margin-right: 70px;
+  }
+  .menu-right {
+    flex: 1;
+    justify-content: flex-start;
+    margin-left: 70px;
+  }
+  .menu-toggle {
+    display: none;
+  }
+}
+.menu-active nav {
+  display: flex;
+}
+
+.menu-active .logo {
+  order: -1;
+}
+
+.menu-active .close-toggle {
+  display: block;
+}
+
+.menu-active .menu-toggle {
+  display: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  margin: 0 auto;
+  font-size: 18px;
+  text-align: center;
+}
+
+.title {
+  font-size: 40px;
+  font-family: "Baskervville", serif;
+  line-height: 48px;
+  font-weight: 400;
+  letter-spacing: 0.4rem;
+  margin-top: 36px;
+  margin-bottom: 14px;
+}
+
+hr {
+  width: 180px;
+  border: 1px solid #E3B6B1;
+}
+
+.title-text {
+  line-height: 26px;
+  margin: 24px 0 36px;
+}
+
+.container {
+  width: 100%;
+  background-color: #FAE9E7;
+}
+.container .inner-wrapper {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.service-item {
+  display: flex;
+  flex-direction: column;
+}
+.service-item .service-img {
+  width: 100%;
+}
+.service-item .service-img img {
+  width: 100%;
+}
+.service-item .service-content {
+  width: 100%;
+  padding: 16px 14px 20px;
+  text-align: left;
+  color: #725A58;
+}
+.service-item .service-content .service-name {
+  font-size: 36px;
+  font-family: "Baskervville", serif;
+  line-height: 43px;
+  font-weight: 400;
+  margin: 0;
+}
+.service-item .service-content .service-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  margin-top: 14px;
+  margin-bottom: 18px;
+}
+.service-item .service-content .service-info div {
+  margin-top: 6px;
+}
+.service-item .service-content .service-info div img {
+  width: 11px;
+}
+.service-item .service-content .service-text {
+  margin-bottom: 24px;
+  line-height: 26px;
+}
+.service-item .service-content .service-text .text-title {
+  font-size: 24px;
+  font-family: "Baskervville", serif;
+  margin-bottom: 14px;
+}
+.service-item .service-content button {
+  width: 100%;
+  height: 64px;
+  font-size: 20px;
+  font-family: "Baskervville", serif;
+  background-color: #FAE9E7;
+  border: 1px solid #725A58;
+}
+
+@media screen and (min-width: 767px) {
+  .title {
+    font-size: 80px;
+    line-height: 130px;
+  }
+  .title-text {
+    width: 356px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .container {
+    padding-top: 84px;
+    padding-bottom: 130px;
+  }
+  .service-item {
+    flex-direction: row;
+  }
+  .service-item .service-img {
+    width: 38%;
+  }
+  .service-item .service-content {
+    margin-left: 20px;
+  }
+  .service-item .service-content .service-info {
+    flex-direction: row;
+  }
+  .service-item .service-content .service-info div {
+    margin-right: 14px;
+  }
+  .service-item .service-content button {
+    width: 170px;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
   width: 100%;
   margin: 0 auto;
   font-size: 18px;
