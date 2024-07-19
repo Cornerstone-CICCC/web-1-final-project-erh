@@ -63,7 +63,7 @@ body{
         }
     }
 //  ABOUT SECTION
-    .about{
+    .home-about{
         display: flex;
         flex-direction: column-reverse;
         .card{
@@ -79,7 +79,7 @@ body{
                 display: flex;
                 position: absolute; 
                 align-items: center;
-                bottom: 93px; 
+                bottom: 75px; 
                 left: 25px;
                 z-index: 2;
                 p{
@@ -132,7 +132,7 @@ body{
                 z-index: -1;
             }
         }
-        .container{
+        .home-about-container{
             padding-top: 40px;
             display: flex;
             flex-direction: column;
@@ -406,7 +406,7 @@ body{
             text-align: center;
             color: #725A58;
         }
-        .container{
+        .makeup-container{
             .col1{
                 display: flex;
                 flex-direction: column;
@@ -415,7 +415,7 @@ body{
                 margin-bottom: 30px;
                 .text-content{
                     padding: 0 20px 0 20px;
-                    .title{
+                    .class-title{
                         display: flex;
                         flex-direction: column;
                         align-items: center;
@@ -529,6 +529,46 @@ body{
         .non-carrousel{
             display: none;
         }
+        .popup-video{
+            position: fixed;
+            top:0; 
+            left:0;
+            z-index: 1000;
+            background-color: #00000085;
+            width: 100%;
+            height: 100%;
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+            display: none;
+            transition: all .5s ease-in-out;
+            video{
+                position: absolute; 
+                top: 50%;
+                left: 50%; 
+                transform: translate(-50%, -50%);
+                width: 750px;
+                object-fit: cover;
+            }
+            .first-video{
+                visibility: hidden;
+            }
+            .second-video{
+                visibility: hidden;
+            }
+            .third-video{
+                visibility: hidden;
+            }
+            .close-btn-2{
+                position:absolute;
+                top: 0; 
+                right: 0;
+                width: 60px;
+                z-index: 10002;
+                cursor: pointer;
+            }
+
+        }
         button{
             border: 0.8px solid #5E4A49;
             margin-top: 30px;
@@ -563,6 +603,18 @@ body{
             text-align: center;
             color: #000000;
             padding: 0 10px 0 10px;
+        }
+    }
+}
+
+@media (max-width:768px){
+    body{
+        .diy-beauty-corner{
+            .popup-video{
+                video{
+                    width: 95%;
+                }
+            }
         }
     }
 }
@@ -619,10 +671,10 @@ body{
                 }
             }
         }
-        .about{
+        .home-about{
             flex-direction: row;
             justify-content: space-evenly;
-            .container{
+            .home-about-container{
                 margin-left: 50px;
                 width: 499px;
                 justify-content: center;
@@ -765,7 +817,7 @@ body{
                 font-weight: 400;
                 letter-spacing: 0.13em;
             }
-            .container{
+            .makeup-container{
                 display: flex; 
                 flex-direction: row;
                 // align-items: center;
@@ -784,10 +836,12 @@ body{
                         flex-direction: row;
                         justify-content: start;
                         align-items: center;
+                        padding: 10px 0 10px 0;
+                        margin-bottom: 30px;
                         width: 100%;
+                        transition: all .5s ease-in-out;
                         &:hover{
                             background-color: rgba(227, 182, 177, .3);
-                            // #E3B6B14D
                         }
                         .view-class{
                             button{
@@ -798,8 +852,8 @@ body{
                     .text-content{
                         width: 100%;
                         margin-top: 10px;
-                        margin-bottom: 30px;
-                        .title{
+                        // margin-bottom: 30px;
+                        .class-title{
                             display: flex;
                             flex-direction: row;
                             align-items: center;
@@ -990,15 +1044,15 @@ body{
 
 @media only screen and (min-width: 1200px){ //desktop responsiveness
     body{
-        .about{
-            .container{
+        .home-about{
+            .home-about-container{
                 margin-left: 0;
                 padding-right: 40px;
             }
             .card{
                 margin-left: 130px;
             }
-            .container{
+            .home-about-container{
                 margin-right: 50px;
             }
         }
@@ -1033,7 +1087,7 @@ body{
             }
         }
         .makeup101{
-            .container{
+            .makeup-container{
                 .col2{
                     display: flex; 
                     align-items: center;
