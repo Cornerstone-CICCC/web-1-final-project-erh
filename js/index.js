@@ -13,6 +13,7 @@ const additionalTitle = document.querySelector(".js-thanks-additional");
 const thanksName = document.querySelector('.js-thanks-name');
 const thanksCountry = document.querySelector('.js-thanks-country')
 const thanksTel = document.querySelector('.js-thanks-tel')
+const noPhotoshoots = document.querySelectorAll('.js-noPhotoshoot')
 
 
 function toggleMenu() {
@@ -178,6 +179,18 @@ form.addEventListener("submit", (e) => {
 
   // add result
   const formData = new FormData(form);
+
+  const eventTypeData = formData.getAll('eventType');
+  console.log(eventTypeData);
+
+  eventTypeData.forEach(type => {
+    if (type === 'photoshoot') {
+      noPhotoshoots.forEach(item => {
+        item.style.display = 'none'
+      })
+    }
+  })
+
 
   // show name
   const nameData = formData.get('name')
