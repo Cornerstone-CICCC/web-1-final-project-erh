@@ -1,5 +1,6 @@
-@import "./partials/variables";
-@import "./partials/mixin";
+
+@import "./partials/_variables";
+@import "./partials/_mixin";
 
 @import "./header";
 @import "./partials/footer";
@@ -9,6 +10,7 @@
 @import "./partials/portfolio";
 @import "./partials/contact";
 @import "./partials/thanks";
+@import "./partials/home";
 
 body{
     margin: 0;
