@@ -10,6 +10,9 @@ const form = document.querySelector("form");
 const countWrappers = document.querySelectorAll(".contact-countwrapper");
 const thanks = document.querySelector(".js-thanks");
 const additionalTitle = document.querySelector(".js-thanks-additional");
+const thanksName = document.querySelector('.js-thanks-name');
+const thanksCountry = document.querySelector('.js-thanks-country')
+const thanksTel = document.querySelector('.js-thanks-tel')
 
 
 
@@ -159,6 +162,21 @@ const additionalInfo = function (attendeeType, count, options) {
   }
 };
 
+// format tel
+const formatTel = function(input) {
+  let cleaned = ('' + input).replace(/\D/g, '');
+
+  if (cleaned.length >= 10) {
+    let part1 = cleaned.substring(0, 3);
+    let part2 = cleaned.substring(3, 6);
+    let part3 = cleaned.substring(6, 10);
+
+    return `${part1}-${part2}-${part3}`;
+  } else {
+    return console.error('Invalid input');;
+  }
+}
+
 // submit btn
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -169,6 +187,18 @@ form.addEventListener("submit", (e) => {
 
   // add result
   const formData = new FormData(form);
+
+  // show name
+  const nameData = formData.get('name')
+  thanksName.innerText = `${nameData}`
+
+  // show country + tel
+  const countryData = formData.get('country')
+  thanksCountry.innerHTML = `${countryData}`
+
+  const telData = formData.get('tel')
+  thanksTel.innerHTML = `${formatTel(telData)}`
+  
 
   //Show Premium Service Data in the Page
   const premiumServiceList = document.querySelector(".js-premium-result");

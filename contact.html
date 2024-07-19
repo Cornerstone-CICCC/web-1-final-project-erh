@@ -97,11 +97,11 @@
                    </div>
                    <div class="contact-callinput">
                      <select name="country" id="country" class="contact-callinput__country">
-                       <option value="+1" selected>+1</option>
-                       <option value="+2">+2</option>
-                       <option value="+3">+3</option>
+                       <option value="+1" selected name="country">+1</option>
+                       <option value="+2" name="country">+2</option>
+                       <option value="+3" name="country">+3</option>
                      </select>
-                     <input type="tel" placeholder="Your mobile number" class="contact-callinput__tel">
+                     <input type="tel" placeholder="Your mobile number" class="contact-callinput__tel" name="tel">
                    </div>
                  </label>
                  <label class="contact-radiowrapper">
@@ -333,8 +333,8 @@
 
         <!-- Thanks -->
          <section class="thanks-container js-thanks">
-          <h3 class="thanks-header__title">Thanks <span>Janny</span>,<br>we will contact you soon!</h3>
-          <p class="thanks-header__text">We will call <span>+1-123-4567-890</span> to confirm the appointment details with you.</p>
+          <h3 class="thanks-header__title">Thanks <span class="js-thanks-name"></span>,<br>we will contact you soon!</h3>
+          <p class="thanks-header__text">We will call <span class="js-thanks-country"></span>-<span class="js-thanks-tel"></span> to confirm the appointment details with you.</p>
 
           <!-- Wedding and Party -->
           <div class="thanks-wrapper">
