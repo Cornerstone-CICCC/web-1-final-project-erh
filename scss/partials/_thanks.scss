@@ -1,5 +1,5 @@
 .thanks-container {
-
+  display: none;
 }
 
 .thanks-header {
@@ -10,6 +10,7 @@
     color: $bold-main-color;
     font-weight: 400;
     margin-bottom: 12px;
+    text-align: left;
 
     @include media('md') {
       font-size: $fontSize-h3;
@@ -20,6 +21,7 @@
     font-size: $fontSize-body;
     color: $brand-color;
     margin: 0;
+    text-align: left;
     @include media('md') {
       font-size: $fontSize-body-sm;
     }
@@ -48,6 +50,7 @@
     font-size: $fontSize-body;
     color: $brand-color;
     margin: 0;
+    text-align: left;
     @include media('md') {
       font-size: $fontSize-body-sm;
     }
@@ -57,7 +60,7 @@
     font-size: $fontSize-h5;
     margin: 0;
     font-family: "Baskervville", serif;
-
+    text-align: left;
     @include media('md') {
       font-size: $fontSize-h4-cap;
     }
@@ -83,12 +86,25 @@
     display: grid;
     gap: 40px;
   }
+
+  &__item {
+    text-align: left;
+    font-size: $fontSize-body;
+    line-height: 27px;
+  }
+
+  &__text {
+    font-size: $fontSize-body;
+    line-height: 27px;
+    margin: 0;
+  }
 }
 
-.thnaks-subtitle {
+.thanks-subtitle {
   font-size: $fontSize-h6;
   font-family: "Baskervville", serif;
   margin: 0;
+  text-align: left;
 }
 
 .thanks-footer {

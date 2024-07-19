@@ -7,9 +7,9 @@ const submitBtn = document.querySelector(".js-submit-btn");
 const firstForm = document.querySelector(".js-first-form");
 const secondForm = document.querySelector(".js-second-form");
 const form = document.querySelector("form");
-const countWrappers = document.querySelectorAll('.contact-countwrapper')
-
-
+const countWrappers = document.querySelectorAll(".contact-countwrapper");
+const thanks = document.querySelector(".js-thanks");
+const additionalTitle = document.querySelector(".js-thanks-additional");
 
 // Event type
 eventTypes.forEach((type) => {
@@ -18,77 +18,73 @@ eventTypes.forEach((type) => {
   });
 });
 
-function changeEventType(type) {
+const changeEventType = function(type) {
   let checkedType = type;
 
   if (checkedType === "wedding") {
-    
-    wedding.forEach(section => {
+    wedding.forEach((section) => {
       section.style.display = "flex";
-    })
+    });
 
-    party.forEach(section => {
+    party.forEach((section) => {
       section.style.display = "none";
-    })
+    });
 
-    submitBtn.style.display = 'none';
-    nextBtn.style.display = 'inline-block';
+    submitBtn.style.display = "none";
+    nextBtn.style.display = "inline-block";
 
   } else if (checkedType === "party") {
-
-    party.forEach(section => {
+    party.forEach((section) => {
       section.style.display = "flex";
-    })
+    });
 
-    wedding.forEach(section => {
+    wedding.forEach((section) => {
       section.style.display = "none";
-    })
+    });
 
-    submitBtn.style.display = 'none';
-    nextBtn.style.display = 'inline-block';
+    submitBtn.style.display = "none";
+    nextBtn.style.display = "inline-block";
+    additionalTitle.innerText = 'Additional headcount';
 
   } else if (checkedType === "photoshoot") {
-    wedding.forEach(section => {
+    wedding.forEach((section) => {
       section.style.display = "none";
-    })
+    });
 
-    party.forEach(section => {
+    party.forEach((section) => {
       section.style.display = "none";
-    })
+    });
 
-    nextBtn.style.display = 'none';
-    submitBtn.style.display = 'inline-block';
+    nextBtn.style.display = "none";
+    submitBtn.style.display = "inline-block";
   }
 }
 
 // change form
 function moveNextForm() {
-  // Hide Current form
   firstForm.style.display = "none";
-  // Show Next form
   secondForm.style.display = "block";
 }
 
 function moveBackForm() {
-  // Hide Current form
   firstForm.style.display = "block";
-  // Show Next form
   secondForm.style.display = "none";
 }
 
 nextBtn.addEventListener("click", (e) => {
   e.preventDefault();
   moveNextForm();
-  nextBtn.style.display = 'none';
-  submitBtn.style.display = 'inline-block';
+  nextBtn.style.display = "none";
+  submitBtn.style.display = "inline-block";
 });
 
 backBtn.addEventListener("click", (e) => {
   e.preventDefault();
   moveBackForm();
-  submitBtn.style.display = 'none';
-  nextBtn.style.display = 'inline-block';
+  submitBtn.style.display = "none";
+  nextBtn.style.display = "inline-block";
 });
+
 
 // change button
 document.addEventListener("DOMContentLoaded", () => {
@@ -99,72 +95,96 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-countWrappers.forEach(count => {
+// count number 
+countWrappers.forEach((count) => {
+  const downBtn = count.querySelector(".js-count-down");
+  const upBtn = count.querySelector(".js-count-up");
+  const countText = count.querySelector(".js-count-text");
 
-  const downBtn = count.querySelector('.js-count-down');
-  const upBtn = count.querySelector('.js-count-up');
-  const countText = count.querySelector('.js-count-text');
-
-  downBtn.addEventListener('click', (e) => {
-    e.preventDefault()
-    if(countText.value >= 1) {
+  downBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    if (countText.value >= 1) {
       countText.value--;
     }
   });
 
-  upBtn.addEventListener('click', (e) => {
-    e.preventDefault()
+  upBtn.addEventListener("click", (e) => {
+    e.preventDefault();
     countText.value++;
-  })
-})
+  });
+});
 
+// Show Additional Attendee
+const additionalInfo = function (attendeeType, count, options) {
+  const additionalAttendeeList = document.querySelector(".js-attendees-result");
 
-// form.addEventListener("submit", (e) => {
-//   e.preventDefault();
-//   const formData = new FormData(form);
+  if (count != 0) {
+    let attendeeLi = document.createElement("li");
 
-//   //Show Premium Service Data in the Page
-//   const premiumServiceList = document.getElementById("premium-service-list");
-//   const premiumServiceData = formData.getAll("premium-service");
+    let countText = "";
+    if (count >= 1) {
+      countText = ` * ${count}`;
+    }
 
-//   for (let i = 0; i < premiumServiceData.length; i++) {
-//     let li = document.createElement("li");
-//     li.innerHTML = premiumServiceData[i];
-//     premiumServiceList.appendChild(li);
-//   }
+    let optionText = "";
+    if (options.length > 0) {
+      for (let i = 0; i < options.length; i++) {
+        if (optionText === "") {
+          optionText = options[i];
+        } else {
+          optionText += ` + ${options[i]}`;
+        }
+      }
+      optionText = ` (${optionText})`;
+    }
 
-//   //Show Additional Attendee Data in the Page
-//   const additionalAttendeeList = document.getElementById(
-//     "additional-attendee-list"
-//   );
+    attendeeLi.innerText = `${attendeeType}${countText}${optionText}`;
+    additionalAttendeeList.appendChild(attendeeLi);
+  }
+};
 
-//   // Show Groom Data
-//   const countGroom = formData.get("contact-countinput-groom");
+// submit btn
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
 
-//   if (countGroom != 0) {
-//     let li = document.createElement("li");
+  // show thanks section
+  form.style.display = "none";
+  thanks.style.display = "block";
 
-//     let countText = "";
-//     // Show Groom Amounts
-//     if (countGroom > 1) {
-//       countText = ` * ${countGroom}`;
-//     }
+  // add result
+  const formData = new FormData(form);
 
-//     // Show Groom Options
-//     const groomOptions = formData.getAll("groom-option");
-//     let optionText = "";
-//     if (groomOptions != []) {
-//       for (let i = 0; i < groomOptions.length; i++) {
-//         if (optionText == "") {
-//           optionText = groomOptions[i];
-//         } else {
-//           optionText += ` + ${groomOptions[i]}`;
-//         }
-//       }
-//       optionText = ` (${optionText})`;
-//     }
+  //Show Premium Service Data in the Page
+  const premiumServiceList = document.querySelector(".js-premium-result");
+  const premiumServiceData = formData.getAll("premium");
 
-//     li.innerText = `Groom${countText}${optionText}`;
-//     additionalAttendeeList.appendChild(li);
-//   }
-// });
+  for (let i = 0; i < premiumServiceData.length; i++) {
+    let premiumLi = document.createElement("li");
+    premiumLi.innerHTML = premiumServiceData[i];
+    premiumServiceList.appendChild(premiumLi);
+  }
+
+  // Show Additional Attendee
+  const additionalAttendeeList = document.querySelector(".js-attendees-result");
+  const countGroom = formData.get("groomCount");
+  const groomOptions = formData.getAll("groom");
+
+  const countBridesmaid = formData.get("bridesmaidCount");
+  const bridesmaidOptions = formData.getAll("bridesmaid");
+
+  const countFlower = formData.get("flowerCount");
+  const flowerOptions = formData.getAll("flower");
+
+  const countWoman = formData.get("womanCount");
+  const womanOptions = formData.getAll("woman");
+
+  const countMan = formData.get("manCount");
+  const manOptions = formData.getAll("man");
+
+  // Create and append attendees
+  additionalInfo("Groom", countGroom, groomOptions);
+  additionalInfo("Bridesmaid", countBridesmaid, bridesmaidOptions);
+  additionalInfo("Flower girl", countFlower, flowerOptions);
+  additionalInfo("Woman", countWoman, womanOptions);
+  additionalInfo("Man", countMan, manOptions);
+});

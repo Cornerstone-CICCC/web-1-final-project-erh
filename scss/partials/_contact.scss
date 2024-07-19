@@ -192,7 +192,6 @@
     font-weight: 400;
     color: $black-color;
     text-align: left;
-
   }
 }
 
@@ -251,6 +250,12 @@
   padding: 12px 16px;
   border: 1px solid $bold-main-color;
   font-size: $fontSize-body;
+}
+
+.contact-input {
+  &.email {
+    width: 100%;
+  }
 }
 
 .contact-searchinput {
@@ -335,6 +340,9 @@
       font-weight: 300;
 
       &.call {
+        margin-top: 4px;
+      }
+      &.email {
         margin-top: 4px;
       }
     }
@@ -446,9 +454,10 @@
 .contact-countinput {
   border: none;
   background-color: $light-pink-color;
-  width: 12px;
-  height: 12px;
+  width: 24px;
+  height: 24px;
   font-size: $fontSize-body;
+  text-align: center;
 }
 
 .contact-textarea {
