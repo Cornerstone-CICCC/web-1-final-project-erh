@@ -1,0 +1,1102 @@
+body{
+    background-color: #F8F6F4;
+    .btn{
+        background-color: transparent;
+        height: 62px;
+        padding: 24px, 32px, 24px, 32px;
+        gap: 10px;
+        font-family: Baskerville;
+        font-size: 20px;
+        &:hover{
+            cursor:pointer;
+        }
+    }
+// MAIN SECTION 
+    .main{
+        background-image: url("../../assets/background-image.jpeg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%; 
+        height: 635px;
+        display: flex; 
+        align-items:center;
+        flex-direction: column;
+        justify-content: end;
+        flex-wrap: wrap;
+        padding-bottom: 50px;
+        // &::after{
+        //     content: "";
+        //     position: fixed;
+        //     top: 0; bottom: 0; left: 0; right: 0; 
+        //     background: hsla(180,0%,50%,0.25);
+        //     pointer-events: none;
+        // }
+        svg{
+            display: block;
+            margin: auto;
+            width: 300px;
+            margin: 0 0 -3px 0;
+        }
+        p{
+            color: white; 
+            font-family: Poppins;
+            text-align: center;
+            padding: 0 20px 0 20px;
+            // margin:0;
+            margin:0 0 33px 0;
+        }
+        button{
+            color: white; 
+            border: 1px solid white; 
+            margin: 0 0 45px 0;
+            width: 222px;
+            transition: all .3s ease-in;
+            &:hover{
+                color: black; 
+                background-color: rgb(248, 246, 244, 55%);
+                border: none;
+            }
+        }
+        .message-menu{
+            display: none;
+        }
+    }
+//  ABOUT SECTION
+    .home-about{
+        display: flex;
+        flex-direction: column-reverse;
+        .card{
+            position: relative;
+            width: 300px;
+            display: block;
+            padding-top: 2rem;
+            z-index: 2;
+            background-color: #E3B6B1;
+            margin-top: 60px;
+            margin-left: 30px;
+            .instagram{
+                display: flex;
+                position: absolute; 
+                align-items: center;
+                bottom: 75px; 
+                left: 25px;
+                z-index: 2;
+                p{
+                    font-family: Avenir;
+                    font-size: 16px;
+                    font-weight: 300;
+                    color: #F8F6F4;
+                    margin: 0;
+                    padding-left: 5px;
+                }
+            } 
+            img{
+                width: 300px;
+                position: relative;
+            }
+            .logos{
+                height: 52px;
+                display: flex; 
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-around;
+                background-color: white;
+                margin-top: -4px;
+                padding: 10px 0 10px 0;
+                border-left: 0.5px solid #888888;
+                border-bottom: 0.5px solid #888888;
+                border-right: 0.5px solid #888888;
+                img{
+                    width: 95px;
+                    padding-left: 30px;
+                    background-color: white;
+                    display: flex; 
+                    align-items: end;
+                }
+                p{
+                    font-family: Poppins;
+                    font-size: 14px; 
+                    font-weight: 300px;;
+                    padding-left: 40px;
+                    color: #535353;
+                }
+            }
+            .card-2{
+                position: absolute; 
+                border: 1px solid $accent-color;
+                height: 95%;
+                width: 300px;
+                top: -20px;
+                left: 20px;
+                z-index: -1;
+            }
+        }
+        .home-about-container{
+            padding-top: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .pink{
+                display: none;
+            }
+            svg{
+                display: block;
+                margin: auto;
+            }
+            h2{
+                font-size: $fontSize-h5;
+                font-family: Baskervville;
+                font-weight: 400;
+                color: $brand-color;
+                text-align: center;
+                margin: 10px 0 10px 0;
+            }
+            p{
+                font-family: Poppins;
+                text-align: center;
+                color: #535353;
+                margin:0;
+                margin: 0 10px 0 10px; 
+            }
+            .signature{
+                display: flex;
+                flex-direction: column-reverse;
+                align-items: center;
+                svg{
+                    width: 165px;
+                    transform: rotate(10deg);
+                }
+                button{
+                    width: 160px;
+                    border: .08px solid $dark-grey-color;
+                    color: #535353;
+                    transition: all .5s ease-in-out;
+                    &:hover{
+                        background-color: $dark-pink-color;
+                        color: $pale-white-color;
+                        border: .8px solid $dark-pink-color;
+                    }
+                }
+            }
+            
+        }
+    }
+//  OUR BRANDS SECTIONS 
+    .brands{
+        background-color: $pale-white-color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        h2{
+            position: relative;
+            margin-top: 30px;
+            font-family: Poppins;
+            font-size: 16px; 
+            font-weight: 300;
+            color: $dark-grey-color;
+            background-color: $pale-white-color;
+            z-index: 2;
+            &::before{
+                position: absolute; 
+                content: ""; 
+                left: 100px; 
+                bottom: 11px; 
+                width: 120px; 
+                height: 0.5px;
+                background-color: #535353;
+            }
+            &::after{
+                position: absolute;
+                right: 95px; 
+                bottom: 11px; 
+                content: "";
+                width: 120px;
+                background-color: #535353;
+                height: .5px; 
+            }
+        }
+        .gallery{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 50px;
+            grid-template-rows: repeat(4, 1fr);
+            margin-bottom: 50px;
+            img{
+                display: block; 
+                margin: auto; 
+
+            }
+        }
+    }
+//  WORK SECTION 
+    .work{
+        button{
+            width: 160px; 
+            color: $dark-grey-color;
+            font-family: Baskervville;
+            font-size: 18px;
+            font-weight: 400;
+            border: 0.8px solid #5E4A49;
+            margin-bottom: 30px;
+            transition: all .5s ease-in-out;
+            &:hover{
+                background-color: $dark-pink-color;
+                color: $pale-white-color;
+                border: .8px solid $dark-pink-color;
+            }
+        }
+        padding-top: 30px;
+        background-color: $light-pink-color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        p{
+            text-align: center;
+            font-family: Poppins;
+            font-size: 16px; 
+            color: $dark-grey-color;
+        }
+        h2{
+            color: #5E4A49;
+            padding: 0 30px 0 30px; 
+            font-size: 40px;
+            font-family: Baskervville;
+            text-align: center;
+            font-weight: 400;
+            line-height: 48px;
+            margin: 0 0 30px 0;
+            letter-spacing: 0.13em;
+            position: relative;
+            &::after{
+                position: absolute; 
+                content: "";
+                bottom: -15px;
+                left: 50%;
+                transform: translateX(-50%);
+                height: 1px;
+                width: 200px;
+                background-color: #E3B6B1;
+            }
+        }
+        .gallery{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            grid-template-rows: repeat(2, 1fr);
+            img{
+                width: 157px;
+            }
+        }
+    }
+// QUOTE SECTION  
+    .quote{
+        background-color: $light-pink-color;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        img{
+            display: block;
+            margin: auto; 
+        }
+        blockquote{
+            font-size:20px;
+            font-family: Baskervville;
+            text-align: center;
+            line-height: 30px;
+            margin-left: 30px;
+            margin-right: 30px;
+            color: #191919;
+        }
+        svg{
+            display: block;
+            margin: auto; 
+        }
+    }
+// MAKEUP AND HAIRSTYLE SECTION 
+    .makeup-and-hairstyle{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding-top: 30px;
+        button{
+            border: 0.8px solid #5E4A49;
+            font-family: Baskervville;
+            font-size: 18px;
+            font-weight: 400; 
+            margin-bottom: 30px; 
+            width: 161px; 
+            color: #5E4A49;
+            transition: all .5s ease-in-out;
+            &:hover{
+                background-color: $dark-pink-color;
+                color: $pale-white-color;
+                border: .8px solid $dark-pink-color;
+            }
+        }
+        h2{
+            position: relative; 
+            color: #725A58;
+            padding: 0 30px 0 30px; 
+            font-size: 40px;
+            font-family: Baskervville;
+            text-align: center;
+            font-weight: 400;
+            line-height: 48px;
+            letter-spacing: 0.13em;
+            margin: 0 0 40px 0;
+            &::after{
+                position: absolute; 
+                content: "";
+                bottom: -20px;
+                left: 50%;
+                transform: translateX(-50%);
+                height: 1px;
+                width: 200px;
+                background-color: #E3B6B1;
+            }
+        }
+        p{
+            font-family: Poppins;
+            font-size: 16px;
+            font-weight: 300;         
+            text-align: center;
+            margin:0 0 20px 0;
+            padding: 0 30px 0 30px;
+        }
+        .gallery{
+            display: flex; 
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .img-text{
+                img{
+                    margin-bottom: 20px;
+                }
+                position: relative;
+                p{
+                    position:absolute;  
+                    color: #F8F6F4;
+                    font-family: Baskervville;
+                    font-size: 50px;
+                    font-weight: 400;
+                    text-align: center;
+                    bottom: 10px;
+                    padding: 0;
+                    display: block;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+    }
+//  MAKEUP 101 SECTION 
+    .makeup101{
+        background-color: $light-pink-color;
+        padding-top: 20px;
+        h2{
+            font-family: Baskervville;
+            font-size: 40px;
+            font-weight: 400;
+            line-height: 48px;
+            letter-spacing: 0.13em;
+            text-align: center;
+            color: #725A58;
+        }
+        .makeup-container{
+            .col1{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 30px;
+                .text-content{
+                    padding: 0 20px 0 20px;
+                    .class-title{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        h3{
+                            font-family: Baskervville;
+                            font-size: 32px;
+                            font-weight: 400;
+                            text-align: center;
+                            color: #725A58;
+                            margin: 15px 0 0 0;
+                        }
+                    }
+                    p{
+                        font-family: Poppins;
+                        font-size: 16px;
+                        font-weight: 300;
+                        text-align: center;
+                        color: #000000;
+                    }
+                }
+                .view-class{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center; 
+                    .button-class{
+                        border: none; 
+                        background-color: transparent;         
+                        font-family: Baskervville;
+                        font-size: 20px;
+                        font-weight: 400;
+                        width: 110px;
+                        color: #5E4A49;
+                    }
+                    margin-bottom: 30px;
+                }
+                button{
+                    width: 312px;
+                    border: 0.8px solid #5E4A49;
+                    color:  #5E4A49;
+                    transition: all .5s ease-in-out;
+                    &:hover{
+                        background-color: $dark-pink-color;
+                        color: $pale-white-color;
+                        border: .8px solid $dark-pink-color;
+                    }
+                }
+            }
+            .col2{
+                img{
+                    width: 100%;
+                    outline: 1px solid white;
+                    outline-offset: -20px;
+                }
+            }
+        }
+    }
+// DIY BEAUTY CORNER SECTION
+    .diy-beauty-corner{
+        margin-top: 20px;
+        display: flex; 
+        align-items: center; 
+        justify-content: center;
+        flex-direction: column;
+        h2{
+            font-family: Baskervville;
+            font-size: 32px;
+            font-weight: 400;
+            text-align: center;
+            color: #725A58;
+            position: relative;
+            &::after{
+                position: absolute; 
+                content: "";
+                bottom: -20px;
+                left: 50%;
+                transform: translateX(-50%);
+                height: 1px;
+                width: 200px;
+                background-color: #E3B6B1;
+            }
+        }
+        .carrousel{
+            margin-top: 30px;
+            background-color: #F8F6F4;
+            .slider-wrapper{
+                position: relative;
+                max-width:  374px;
+                margin: 0 auto;
+                background-color: #F8F6F4;
+                .slider{
+                    display: flex;
+                    aspect-ratio:  16 / 9;
+                    overflow-x: auto;
+                    scroll-snap-type: x mandatory;
+                    scroll-behavior: smooth;
+                    border-radius: 0.5rem;
+                    img{
+                        scroll-snap-align: center;
+                        width: 300px; 
+                        &:nth-child(1){
+                            margin-right: 20px;
+                        }
+                        &:nth-child(2){
+                            margin-right: 20px;
+                        }
+                    }
+                }
+            }
+        }
+        .non-carrousel{
+            display: none;
+        }
+        .popup-video{
+            position: fixed;
+            top:0; 
+            left:0;
+            z-index: 1000;
+            background-color: #00000085;
+            width: 100%;
+            height: 100%;
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+            display: none;
+            transition: all .5s ease-in-out;
+            video{
+                position: absolute; 
+                top: 50%;
+                left: 50%; 
+                transform: translate(-50%, -50%);
+                width: 750px;
+                object-fit: cover;
+            }
+            .first-video{
+                visibility: hidden;
+            }
+            .second-video{
+                visibility: hidden;
+            }
+            .third-video{
+                visibility: hidden;
+            }
+            .close-btn-2{
+                position:absolute;
+                top: 0; 
+                right: 0;
+                width: 60px;
+                z-index: 10002;
+                cursor: pointer;
+            }
+
+        }
+        button{
+            border: 0.8px solid #5E4A49;
+            margin-top: 30px;
+            width: 206px;
+            color: #5E4A49;
+            transition: all .5s ease-in-out;
+            &:hover{
+                background-color: $dark-pink-color;
+                color: $pale-white-color;
+                border: .8px solid $dark-pink-color;
+            }
+        }
+    }
+// LETS TALK SECTION
+    .lets-talk{
+        padding-top: 80px;
+        padding-bottom: 30px;
+        h2{
+            font-family: Baskervville;
+            font-size: 40px;
+            font-weight: 400;
+            line-height: 48px;
+            text-align: center;
+            color: #725A58;
+            letter-spacing: 0.13em;
+        }
+        p{
+            font-family: Poppins;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 25.6px;
+            text-align: center;
+            color: #000000;
+            padding: 0 10px 0 10px;
+        }
+    }
+}
+
+@media (max-width:768px){
+    body{
+        .diy-beauty-corner{
+            .popup-video{
+                video{
+                    width: 95%;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) { //ipad and desktop responsiveness
+    body{
+        .main{
+            position: relative;
+            svg{
+                width: 607px;
+                margin-bottom: 10px;
+            }
+            p{
+                font-size: 18px;
+                margin-bottom: 20px;
+            }
+            button{
+                width: 222px;
+                margin-bottom: 130px; 
+            }
+            .message-menu{
+                width: 60px;
+                position: absolute;
+                display: flex;
+                justify-content: end;
+                align-items: end;
+                width: 100%;
+                transition: all 1s linear;
+                .toggle-menu{
+                    position: absolute;
+                    bottom: 0; 
+                    right: 0;
+                    z-index: -1;
+                    opacity: 0%;
+                    transition: all .3s linear;
+                    &.open-menu{
+                        opacity:100%;
+                        z-index: 1;
+                    }
+                }
+                #message-logo{
+                    position: absolute;
+                    right: 0; 
+                    bottom: 0;
+                    opacity: 100%;
+                    transition: all .3s linear;
+                }
+                &:hover{
+                    cursor:pointer;
+                }
+                svg{
+                    width: 60px;
+                    margin:0;
+                }
+            }
+        }
+        .home-about{
+            flex-direction: row;
+            justify-content: space-evenly;
+            .home-about-container{
+                margin-left: 50px;
+                width: 499px;
+                justify-content: center;
+                align-items: start;
+                .pink{
+                    display: block;
+                    margin: 0;
+                }
+                .black{
+                    display: none;
+                }
+                h2{
+                    text-align: left;
+                    font-size: 48px;
+                    font-weight: 400;
+                    line-height: 62.4px;
+                }
+                p{
+                    text-align: left;
+                    margin: 0;
+                    font-size: 18px;
+                    font-weight: 300;
+                    line-height: 27px;
+                }
+                .signature{
+                    flex-direction: row;
+                    justify-content: space-between;
+                    width: 100%;
+                    svg{
+                        transform: rotate(0deg);
+                        width: 248px;
+                    }
+                    button{
+                        width: 160px;
+                        margin-top: 30px;
+                    }
+                }
+            }
+        }
+        .brands{
+            h2{
+                font-size: 18px;
+                font-weight: 300;
+                line-height: 27px;
+                &::before{
+                    left: 110px; 
+                    bottom: 11px; 
+                    width: 375px; 
+                }
+                &::after{
+                    right: 115px; 
+                    bottom: 11px; 
+                    width: 375px;
+                }
+            }
+            .gallery{
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+            }
+        }
+        .work{
+            h2{
+                font-size: 80px;
+                font-weight: 400;
+                line-height: 104px;
+                padding-top: 40px;
+            }
+            p{        
+                font-size: 18px;
+                font-weight: 300;
+                line-height: 27px;
+                padding-top: 10px;
+                margin: 0 250px 30px 250px;
+            }
+            button{
+                width: 160px;               
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 30px;
+                margin-bottom: 70px;
+            }
+            .gallery{
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: repeat(1, 1fr);
+                width: 100%;
+                gap:20px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            } 
+        }
+        .quote{  
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            img{
+                margin-top: 30px;
+            }  
+            blockquote{
+                font-size: 32px;
+                font-weight: 400;
+                line-height: 41.6px;
+                padding-left: 130px; 
+                padding-right: 130px;
+            }       
+        }
+        .makeup-and-hairstyle{
+            h2{
+                font-size: 80px;
+                font-weight: 400;
+                line-height: 104px;
+                letter-spacing: 0.13em;
+                padding-top: 60px;
+            }
+            p{          
+                font-size: 18px;
+                font-weight: 300;
+                line-height: 27px;
+                padding: 20px 250px 0 250px;
+            }
+            button{
+                width: 171px;
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 30px;
+                margin: 10px 0 150px 0;
+            }
+            .gallery{
+                margin-bottom: 150px;
+            }
+        }
+        .makeup101{
+            margin: 0 40px 0 40px;
+            h2{
+                font-family: Baskervville;
+                font-size: 80px;
+                font-weight: 400;
+                letter-spacing: 0.13em;
+            }
+            .makeup-container{
+                display: flex; 
+                flex-direction: row;
+                // align-items: center;
+                justify-content: space-evenly;
+                padding: 0 60px 30px 60px;
+                .col1{
+                    // height: 558px;
+                    display: flex;
+                    align-items: start;
+                    justify-content: center;
+                    padding-right: 30px;
+                    margin-bottom: 0;
+                    height: 100%;
+                    .section{
+                        display: flex; 
+                        flex-direction: row;
+                        justify-content: start;
+                        align-items: center;
+                        padding: 10px 0 10px 0;
+                        margin-bottom: 30px;
+                        width: 100%;
+                        transition: all .5s ease-in-out;
+                        &:hover{
+                            background-color: rgba(227, 182, 177, .3);
+                        }
+                        .view-class{
+                            button{
+                                display: none; 
+                            }
+                        }
+                    }
+                    .text-content{
+                        width: 100%;
+                        margin-top: 10px;
+                        // margin-bottom: 30px;
+                        .class-title{
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            justify-content: start;
+                            h3{
+                                margin: 0;
+                                padding-left: 10px;
+                            }
+                        }
+                        p{
+                            text-align: left;
+                        }
+                    }
+                    button{
+                        width: 184px;
+                        margin-left: 20px;
+                    }
+                }
+                .col2{
+                    flex-basis: 60%;
+                    padding-bottom: 30px;
+                }
+            }
+        }
+        .diy-beauty-corner{
+            h2{
+                font-size: 48px;
+                font-weight: 400; 
+                padding-top: 50px;  
+            }
+            button{
+                width: 222px;
+                font-size: 20px;
+                font-weight: 400;
+                margin-bottom: 60px;
+                margin-top: 50px;
+            }
+            .carrousel{
+                display: none;
+            }
+            .non-carrousel{
+                display: flex; 
+                align-items: center;
+                justify-content: space-evenly;
+                .gallery{
+                    display: flex;
+                    gap:30px;
+                    img{
+                        transition: all .5s ease-in-out;
+                        &:hover{
+                            cursor: pointer;
+                            filter: brightness(75%);
+                        }
+                    }
+                }
+            }
+        }
+        .lets-talk{
+            h2{
+                font-size: 80px;
+                font-weight: 400;
+                line-height: 104px;
+                letter-spacing: 0.13em;
+            }
+            p{
+                font-size: 18px;
+                font-weight: 300;
+                line-height: 27px;
+                text-align: center;
+                padding: 0 450px 0 450px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px){ //ipad resposiveness
+    body{
+        .makeup-and-hairstyle{
+            .gallery{
+                display: flex;
+                flex-direction: row;
+                gap: 80px;
+                #party{
+                    order: 1;
+                    transition: all .5s ease-in-out;
+                    img{
+                        width: 298px;
+                        transition: all .5s ease-in-out;
+                    }
+                    p{
+                        left: 28px;
+                        color: #FAE9E7;
+                        bottom: 40px;
+                        span{
+                            color: #B99692;
+                        }
+                    }
+                    &:hover{
+                        img{
+                            width: 388px;
+                            transition: all .5s ease-in-out;
+                        }
+                        .border{
+                            position: absolute; 
+                            border: 1px solid $accent-color;
+                            height: 95%;
+                            width: 100%;
+                            top: -20px;
+                            left: 20px;
+                            z-index: -1;
+                        }
+                    }
+                }
+                #wedding{
+                    position: relative;
+                    order: 2;
+                    transition: all .5s ease-in-out;
+                    img{
+                        width: 298px;
+                        transition: all .5s ease-in-out;
+                    }
+                    p{
+                        left: 52px;
+                        color: #FAE9E7;
+                        bottom: 40px;
+                        span{
+                            color: #B99692;
+                        }
+                    }
+                    &:hover{
+                        img{
+                            width: 388px;
+                            transition: all .5s ease-in-out;
+                        }
+                        .border{
+                            position: absolute; 
+                            border: 1px solid $accent-color;
+                            height: 95%;
+                            width: 100%;
+                            top: -20px;
+                            left: 20px;
+                            z-index: -1;
+                        }
+                    }
+                }
+                #photoshoot{
+                    order: 3;
+                    transition: all .5s ease-in-out;
+                    img{
+                        width: 298px;
+                        transition: all .5s ease-in-out;
+                    }
+                    p{
+                        left: 85px;
+                        color: #FAE9E7;
+                        bottom: 40px;
+                        span{
+                            color: #B99692;
+                        }
+                    }
+                    &:hover{
+                        img{
+                            width: 388px;
+                            transition: all .5s ease-in-out;
+                        }
+                        .border{
+                            position: absolute; 
+                            border: 1px solid $accent-color;
+                            height: 95%;
+                            width: 100%;
+                            top: -20px;
+                            left: 20px;
+                            z-index: -1;
+                        }
+                    }
+                }
+            }
+        }
+        .diy-beauty-corner{
+            h2{
+                &::after{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px){ //desktop responsiveness
+    body{
+        .home-about{
+            .home-about-container{
+                margin-left: 0;
+                padding-right: 40px;
+            }
+            .card{
+                margin-left: 130px;
+            }
+            .home-about-container{
+                margin-right: 50px;
+            }
+        }
+        .quote{
+            img{
+                margin-top: 60px;
+            }
+            blockquote{
+                padding: 0 390px 0 390px;
+            }
+            svg{
+                margin-bottom: 60px;
+            }
+        }
+        .makeup-and-hairstyle{
+            .gallery{
+                // #party{
+                //     img{
+                //         width: 298px;
+                //     }
+                // }
+                // #wedding{
+                //     img{
+                //         width: 388px;
+                //     }
+                // }
+                // #photoshoot{
+                //     img{
+                //         width: 298px;
+                //     }
+                // }
+            }
+        }
+        .makeup101{
+            .makeup-container{
+                .col2{
+                    display: flex; 
+                    align-items: center;
+                    justify-content: center;
+                    img{
+                        max-width: 407px;
+                    }
+                }
+            }
+        }
+    }
+}
