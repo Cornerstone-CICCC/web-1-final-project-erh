@@ -12,7 +12,7 @@
   <script defer src="./js/index.js"></script>
 </head>
 <body>
-  <header>Header</header>
+  <div id="header"></div>
   <section class="contact-header">
     <h1 class="contact-title">CONTACT</h1>
     <p class="contact-text">Get a quote and book a free consultation for your<br class="contact-pconly">special day or our academy services</p>
@@ -60,7 +60,7 @@
                <div class="contact-formitem">
                  <p class="contact-formitem__title">Event Date</p>
                  <div class="contact-formitem">
-                   <input type="date" name="dob" id="dob" placeholder="Select Date" class="contact-forminput">
+                   <input type="date" name="eventDate" id="dob" placeholder="Select Date" class="contact-forminput">
                    <label class="contact-simplecheckboxwrapper">
                      <input type="checkbox" class="contact-simplecheckbox">
                      <span class="contact-simplecheckbox__text">Not decided</span>
@@ -117,7 +117,7 @@
                       <input type="radio" name="contact" value="email" checked="" class="contact-radio">
                       <span class="contact-radio__text email">Email</span>
                     </div>
-                   <input type="email" name="contact" value="" placeholder="Your email address" class="contact-input email">
+                   <input type="email" name="email" value="" placeholder="Your email address" class="contact-input email">
                  </label>
                </div>
    
@@ -154,11 +154,11 @@
                  <p class="contact-formitem__title">Bridal Service</p>
                  <div class="contact-checkboxwrapper">
                    <label class="contact-checkbox">
-                     <input class="contact-checkbox__input" type="checkbox" name="BridalService" value="makeup" checked>
+                     <input class="contact-checkbox__input" type="checkbox" name="bridalService" value="makeup" checked>
                      <span class="contact-checkbox__title">Makeup</span>
                    </label>
                    <label class="contact-checkbox">
-                     <input class="contact-checkbox__input" type="checkbox" name="BridalService" value="hairstyle">
+                     <input class="contact-checkbox__input" type="checkbox" name="bridalService" value="hairstyle">
                      <span class="contact-checkbox__title">Hairstyle</span>
                    </label>
                  </div>
@@ -168,7 +168,7 @@
                  <label class="contact-formitem">
                    <span class="contact-formitem__title">Event Location</span>
                    <div class="contact-searchinput">
-                     <input type="text" name="name" id="name" placeholder="Search address" class="contact-input">
+                     <input type="text" name="eventLocation" id="name" placeholder="Search address" class="contact-input">
                    </div>
                  </label>
                  <label class="contact-simplecheckboxwrapper">
@@ -404,6 +404,6 @@
       </div>
     </div>
   </section>
-  <footer>Footer</footer>
+  <div id="footer"></div>
 </body>
 </html>
