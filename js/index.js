@@ -14,11 +14,21 @@ const thanksName = document.querySelector('.js-thanks-name');
 const thanksCountry = document.querySelector('.js-thanks-country')
 const thanksTel = document.querySelector('.js-thanks-tel')
 const noPhotoshoots = document.querySelectorAll('.js-noPhotoshoot')
+const eventDate = document.querySelector('.event-date')
+const eventDateDecide = document.querySelector('.event-date-decide')
+const eventTime = document.querySelector('.event-time')
+const eventTimeDecide = document.querySelector('.event-time-decide')
+const contact = document.getElementsByName("contact");
+const country = document.querySelector('.contact-callinput__country')
+const tel = document.querySelector('.contact-callinput__tel')
+const email = document.querySelector('.contact-callinput__email')
+const eventLocation = document.querySelector('.event-location')
+const eventLocationDecide = document.querySelector('.event-location-decide')
 
 fetch("partials/header.html")
   .then((response) => response.text())
   .then((data) => document.querySelector("#header").innerHTML = data);
-  
+
 fetch("partials/footer.html")
   .then((response) => response.text())
   .then((data) => document.querySelector("#footer").innerHTML = data);
@@ -113,7 +123,57 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// count number 
+// disable event date
+eventDateDecide.addEventListener("change", () => {
+  if (eventDateDecide.checked) {
+    eventDate.setAttribute("disabled", true)
+  } else {
+    eventDate.removeAttribute("disabled")
+  }
+})
+
+// disable event time
+eventTimeDecide.addEventListener("change", () => {
+  if (eventTimeDecide.checked) {
+    eventTime.setAttribute("disabled", true)
+  } else {
+    eventTime.removeAttribute("disabled")
+  }
+})
+
+// disable contact
+contact.forEach((checkedContact) => {
+  checkedContact.addEventListener("change", () => {
+    if (checkedContact.value == "call") {
+      email.setAttribute("disabled", true)
+
+      country.removeAttribute("disabled")
+      tel.removeAttribute("disabled")
+
+    } else if (checkedContact.value == "email") {
+      country.setAttribute("disabled", true)
+      tel.setAttribute("disabled", true)
+
+      email.removeAttribute("disabled")
+
+    } else {
+      country.setAttribute("disabled", true)
+      tel.setAttribute("disabled", true)
+      email.setAttribute("disabled", true)
+    }
+  });
+});
+
+// disable event location
+eventLocationDecide.addEventListener("change", () => {
+  if (eventLocationDecide.checked) {
+    eventLocation.setAttribute("disabled", true)
+  } else {
+    eventLocation.removeAttribute("disabled")
+  }
+})
+
+// count number
 countWrappers.forEach((count) => {
   const downBtn = count.querySelector(".js-count-down");
   const upBtn = count.querySelector(".js-count-up");
@@ -209,7 +269,7 @@ form.addEventListener("submit", (e) => {
 
   const telData = formData.get('tel')
   thanksTel.innerHTML = `${formatTel(telData)}`
-  
+
 
   //Show Premium Service Data in the Page
   const premiumServiceList = document.querySelector(".js-premium-result");

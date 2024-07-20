@@ -111,9 +111,9 @@
                <div class="contact-formitem">
                  <p class="contact-formitem__title">Event Date</p>
                  <div class="contact-formitem">
-                   <input type="date" name="eventDate" id="dob" placeholder="Select Date" class="contact-forminput">
+                   <input type="date" name="eventDate" id="dob" placeholder="Select Date" class="contact-forminput event-date">
                    <label class="contact-simplecheckboxwrapper">
-                     <input type="checkbox" class="contact-simplecheckbox">
+                     <input type="checkbox" class="contact-simplecheckbox event-date-decide">
                      <span class="contact-simplecheckbox__text">Not decided</span>
                    </label>
                  </div>
@@ -122,13 +122,13 @@
                <div class="contact-formitem">
                  <p class="contact-formitem__title">Event Time</p>
                  <div class="contact-formitem">
-                   <select name="eventTime" id="eventTime" class="contact-selectbox">
+                   <select name="eventTime" id="eventTime" class="contact-selectbox event-time">
                      <option value="Full day" selected>Full day</option>
                      <option value="Evening">Evening</option>
                      <option value="Midnight">Midnight</option>
                    </select>
                    <label class="contact-simplecheckboxwrapper">
-                     <input type="checkbox" class="contact-simplecheckbox">
+                     <input type="checkbox" class="contact-simplecheckbox event-time-decide">
                      <span class="contact-simplecheckbox__text">Not decided</span>
                    </label>
                  </div>
@@ -168,7 +168,7 @@
                       <input type="radio" name="contact" value="email" checked="" class="contact-radio">
                       <span class="contact-radio__text email">Email</span>
                     </div>
-                   <input type="email" name="email" value="" placeholder="Your email address" class="contact-input email">
+                   <input type="email" name="email" value="" placeholder="Your email address" class="contact-input email contact-callinput__email">
                  </label>
                </div>
 
@@ -219,11 +219,11 @@
                  <label class="contact-formitem">
                    <span class="contact-formitem__title">Event Location</span>
                    <div class="contact-searchinput">
-                     <input type="text" name="eventLocation" id="name" placeholder="Search address" class="contact-input">
+                     <input type="text" name="eventLocation" id="name" placeholder="Search address" class="contact-input event-location">
                    </div>
                  </label>
                  <label class="contact-simplecheckboxwrapper">
-                   <input type="checkbox" class="contact-simplecheckbox">
+                   <input type="checkbox" class="contact-simplecheckbox event-location-decide">
                    <span class="contact-simplecheckbox__text">Not decided</span>
                  </label>
                </div>
