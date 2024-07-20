@@ -34,7 +34,7 @@
 
     @include media('md') {
       bottom: -18px;
-      left: 25%;  
+      left: 25%;
     }
 
   }
@@ -144,4 +144,10 @@
   border: 1px solid $brown-color;
   background-color: $light-pink-color;
   font-family: "Baskervville", serif;
+
+  &:hover {
+    color: $paper-white-color;
+    background-color: $dark-pink-color;
+    cursor: pointer;
+  }
 }

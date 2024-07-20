@@ -85,6 +85,12 @@ body {
       margin-left: auto;
       margin-right: auto;
       color: v.$bold-main-color;
+
+      &:hover {
+        color: $paper-white-color;
+        background-color: $dark-pink-color;
+        cursor: pointer;
+      }
     }
   }
 }
