@@ -27,7 +27,6 @@
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: flex-start;
-  width: 50%;
   height: 140px;
   gap: 10px;
 
@@ -47,10 +46,14 @@
 }
 
 @media (min-width: 768px) {
+  .link-wrapper {
+    max-width: 1200px;
+    width: 100%;
+  }
   .link-inner-wrapper{
     flex-direction: row;
     justify-content: space-between;
-    gap: 6%;
+    gap: 12% 6%;
     width: 80%;
     height: auto;
   }
