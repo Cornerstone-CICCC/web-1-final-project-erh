@@ -4,12 +4,12 @@ const menuLogo = document.getElementById("message-logo")
 const closeBtn = document.getElementById("close-btn")
 
 
-function openmenu(){
+function openmenuhome(){
     menu.classList.add("open-menu")
     menuLogo.style.opacity = "0%" 
 }
 
-function closemenu(){
+function closemenuhome(){
     menu.classList.remove("open-menu")
     menuLogo.style.opacity ="100%"
 }
