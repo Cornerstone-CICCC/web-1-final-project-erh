@@ -12,7 +12,29 @@
   <script defer src="./js/index.js"></script>
 </head>
 <body>
-  <div id="header"></div>
+  <header class="header">
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="close-toggle" onclick="toggleMenu()">&#10005;</div>
+    <nav class="menu-left">
+      <a href="/">Home</a>
+      <a href="/portfolio.html">My Work</a>
+      <a href="/service.html">Services</a>
+      <a href="#classes">Classes</a>
+    </nav>
+    <div class="logo">
+      <img src="../assets/header/logo.png" alt="Logo" width="100">
+    </div>
+    <nav class="menu-right">
+      <a href="#beaytytips">Beauty Tips</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+      <a href="#instagram"><img src="../assets/header/instagram-logo.png" alt="Instagram"></a>
+    </nav>
+  </header>
   <section class="contact-header">
     <h1 class="contact-title">CONTACT</h1>
     <p class="contact-text">Get a quote and book a free consultation for your<br class="contact-pconly">special day or our academy services</p>
@@ -32,6 +54,22 @@
     </div>
   </section>
   <div id="form"></div>
-  <div id="footer"></div>
+  <footer>
+    <img class="footer-logo" src="../assets/header/logo.png" alt="Logo" width="126">
+    <div class="footer-text">Expert makeup and hairstyle studio</div>
+    <img class="sns-logo" src="../assets/footer/sns-logos.png" alt="SNS">
+    <div class="link-wrapper">
+      <nav class="link-inner-wrapper">
+        <a href="/">Home</a>
+        <a href="/portfolio.html">My Work</a>
+        <a href="/service.html">Services</a>
+        <a href="#classes">Classes</a>
+        <a href="#beaytytips">Beauty Tips</a>
+        <a href="/about.html">About</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+    </div>
+    <div class="copyright">Copyright 2024, Carla Beauty</div>
+  </footer>
 </body>
 </html>
