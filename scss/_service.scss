@@ -99,6 +99,12 @@ hr{
       font-family: "Baskervville", serif;
       background-color: $light-pink-color;
       border: 1px solid $bold-main-color;
+
+      &:hover {
+        color: $paper-white-color;
+        background-color: $dark-pink-color;
+        cursor: pointer;
+      }
     }
   }
 }
