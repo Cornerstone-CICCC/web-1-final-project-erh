@@ -25,13 +25,6 @@ const email = document.querySelector('.contact-callinput__email')
 const eventLocation = document.querySelector('.event-location')
 const eventLocationDecide = document.querySelector('.event-location-decide')
 
-fetch("partials/header.html")
-  .then((response) => response.text())
-  .then((data) => document.querySelector("#header").innerHTML = data);
-
-fetch("partials/footer.html")
-  .then((response) => response.text())
-  .then((data) => document.querySelector("#footer").innerHTML = data);
 
 function toggleMenu() {
   const header = document.querySelector('.header');
