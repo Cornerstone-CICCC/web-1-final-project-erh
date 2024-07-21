@@ -3,6 +3,7 @@
   display: grid;
   gap: 24px;
   padding: 0 16px;
+  margin-top: 32px;
 
   @include media('md') {
     gap: 32px;
@@ -61,6 +62,7 @@
 .portfolio-contentsContainer {
   background-color: $light-pink-color;
   width: 100%;
+  margin-bottom: 32px;
 }
 
 .portfolio-contentsWrapper {
