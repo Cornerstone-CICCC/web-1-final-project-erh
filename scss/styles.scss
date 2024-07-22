@@ -1,0 +1,22 @@
+
+@import "./partials/_variables";
+@import "./partials/_mixin";
+
+@import "./header";
+@import "./partials/footer";
+
+@import "service";
+@import "./about";
+@import "./partials/portfolio";
+@import "./partials/contact";
+@import "./partials/thanks";
+@import "./partials/home";
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}

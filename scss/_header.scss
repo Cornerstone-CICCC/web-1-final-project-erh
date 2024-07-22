@@ -1,0 +1,188 @@
+*{
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: $pale-white-color;
+  position: relative;
+}
+
+.header-contents {
+  padding: 10px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.menu-active{
+  flex-direction: column;
+}
+
+.menu-active .logo {
+  margin: 10px 0;
+}
+
+.header nav {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  align-items: center;
+}
+
+.header nav a {
+  color: $bold-main-color;
+  text-decoration: none;
+  padding: 10px 10px;
+  text-align: center;
+  width: 100%;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.header nav a:hover {
+}
+
+.menu-toggle {
+  cursor: pointer;
+  display: block;
+  margin: 10px 0;
+}
+
+.menu-toggle span {
+  background-color: $bold-main-color;
+  display: block;
+  height: 2px;
+  margin: 5px 0;
+  width: 25px;
+}
+
+.close-toggle {
+  display: none;
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  cursor: pointer;
+  font-size: 32px;
+  color: $bold-main-color;
+}
+
+.header-insta {
+  display: block;
+}
+
+.header-onlymodal {
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 10px;
+  }
+
+  .header-contents {
+    max-width: 1200px;
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+
+  .header-logo {
+    padding: 0 48px;
+    &__image {
+      max-width: 126px;
+      width: 100%;
+    }
+  }
+
+  .header nav {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    width: auto;
+    align-items: center;
+  }
+
+  .header nav a {
+    border-right: 1px solid $accent-color;
+    font-size: 20px;
+    width: auto;
+    padding: 10px 24px;
+  }
+
+  .header nav a:last-child {
+    border-right: none;
+  }
+
+  .menu-left {
+    flex: 1;
+    justify-content: flex-end;
+  }
+
+  .menu-right {
+    flex: 1;
+    justify-content: flex-start;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .header-insta {
+    display: none;
+  }
+}
+
+// toggle
+.menu-active {
+  nav {
+    display: flex;
+  }
+
+  .header-insta {
+    display: none;
+  }
+
+  .header-onlymodal {
+    display: block;
+  }
+
+  .header-nomodal {
+    display: none;
+  }
+
+  .header-sns-logo {
+    margin-top: 56px;
+  }
+
+  .header-subtext {
+    font-size: $fontSize-body;
+  }
+
+  .header-contents {
+    flex-direction: column;
+  }
+
+  .logo {
+    order: -1;
+    margin-bottom: 58px;
+  }
+
+  .close-toggle {
+    display: block;
+  }
+
+  .menu-toggle {
+    display: none;
+  }  
+}
