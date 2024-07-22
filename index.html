@@ -287,377 +287,377 @@
         <p>Check availability, pricing, and schedule a meeting for your special day or our academy services.</p>
     </div>
     <section class="contact-container">
-        <div class="contact-tabContainer">
-          <input id="services" type="radio" name="tab_item" class="contact-tabradio" checked="checked" /><label class="contact-tabItem" for="services">Services</label>
-          <div class="contact-content">
-            <form action="contact.html" method="get" class="contact-form">
-              <!-- First form section -->
-               <div class="js-first-form">
-                 <div class="contact-formcontent">
-                   <div class="contact-formitem">
-                     <p class="contact-formitem__title">Event Type</p>
-                     <div class="contact-checkboxwrapper three">
-                       <label class="contact-checkbox">
-                         <input class="contact-checkbox__input" type="radio" name="eventType" value="wedding" checked>
-                         <span class="contact-checkbox__title">Wedding</span>
-                       </label>
-                       <label class="contact-checkbox">
-                         <input class="contact-checkbox__input" type="radio" name="eventType" value="party">
-                         <span class="contact-checkbox__title">Party</span>
-                       </label>
-                       <label class="contact-checkbox">
-                         <input  class="contact-checkbox__input" type="radio" name="eventType" value="photoshoot">
-                         <span class="contact-checkbox__title">Photoshoot</span>
-                       </label>
-                     </div>
-                   </div>
-         
-                   <div class="contact-formitem">
-                     <p class="contact-formitem__title">Event Date</p>
-                     <div class="contact-formitem">
-                       <input type="date" name="eventDate" id="dob" placeholder="Select Date" class="contact-forminput">
-                       <label class="contact-simplecheckboxwrapper">
-                         <input type="checkbox" class="contact-simplecheckbox">
-                         <span class="contact-simplecheckbox__text">Not decided</span>
-                       </label>
-                     </div>
-                   </div>
-         
-                   <div class="contact-formitem">
-                     <p class="contact-formitem__title">Event Time</p>
-                     <div class="contact-formitem">
-                       <select name="eventTime" id="eventTime" class="contact-selectbox">
-                         <option value="Full day" selected>Full day</option>
-                         <option value="Evening">Evening</option>
-                         <option value="Midnight">Midnight</option>
-                       </select>
-                       <label class="contact-simplecheckboxwrapper">
-                         <input type="checkbox" class="contact-simplecheckbox">
-                         <span class="contact-simplecheckbox__text">Not decided</span>
-                       </label>
-                     </div>
-                   </div>
-         
-                   <label class="contact-formitem">
-                     <span class="contact-formitem__title">Name</span>
-                     <input type="text" name="name" id="name" placeholder="Your name" class="contact-input">
-                   </label>
-         
-                   <div class="contact-formitem">
-                     <p class="contact-formitem__title">Contact</p>
-                     <label class="contact-radiowrapper">
-                       <div class="contact-radio__call">
-                         <input type="radio" name="contact" value="call" checked="" class="contact-radio">
-                         <span class="contact-radio__text call">Call</span>
-                       </div>
-                       <div class="contact-callinput">
-                         <select name="country" id="country" class="contact-callinput__country">
-                           <option value="+1" selected name="country">+1</option>
-                           <option value="+2" name="country">+2</option>
-                           <option value="+3" name="country">+3</option>
-                         </select>
-                         <input type="tel" placeholder="Your mobile number" class="contact-callinput__tel" name="tel">
-                       </div>
+      <div class="contact-tabContainer">
+        <input id="services" type="radio" name="tab_item" class="contact-tabradio" checked="checked" /><label class="contact-tabItem" for="services">Services</label>
+        <div class="contact-content">
+          <form action="contact.html" method="get" class="contact-form" id="contact-form">
+            <!-- First form section -->
+             <div class="js-first-form">
+               <div class="contact-formcontent">
+                 <div class="contact-formitem">
+                   <p class="contact-formitem__title">Event Type</p>
+                   <div class="contact-checkboxwrapper three">
+                     <label class="contact-checkbox">
+                       <input class="contact-checkbox__input" type="radio" name="eventType" value="wedding" checked>
+                       <span class="contact-checkbox__title">Wedding</span>
                      </label>
-                     <label class="contact-radiowrapper">
-                       <input type="radio" name="contact" value="whatsApp" checked="" class="contact-radio">
-                       <span class="contact-radio__text">WhatsApp</span>
+                     <label class="contact-checkbox">
+                       <input class="contact-checkbox__input" type="radio" name="eventType" value="party">
+                       <span class="contact-checkbox__title">Party</span>
                      </label>
-                     <label class="contact-radiowrapper">
-                       <input type="radio" name="contact" value="sms" checked="" class="contact-radio">
-                       <span class="contact-radio__text">SMS</span>
-                     </label>
-                     <label class="contact-radiowrapper">
-                        <div class="contact-radio__call">
-                          <input type="radio" name="contact" value="email" checked="" class="contact-radio">
-                          <span class="contact-radio__text email">Email</span>
-                        </div>
-                       <input type="email" name="email" value="" placeholder="Your email address" class="contact-input email">
-                     </label>
-                   </div>
-       
-         
-                   <!-- Wedding -->
-                   <div class="contact-formitem js-wedding-form">
-                     <p class="contact-formitem__title">When do you want us to call?</p>
-                     <label class="contact-radiowrapper">
-                       <input type="radio" name="callTime" value="I don’t mind" checked="" class="contact-radio">
-                       <span class="contact-radio__text">I don’t mind</span>
-                     </label>
-                     <label class="contact-radiowrapper">
-                       <input type="radio" name="callTime" value="Morning" checked="" class="contact-radio">
-                       <span class="contact-radio__text">Morning</span>
-                     </label>
-                     <label class="contact-radiowrapper">
-                       <input type="radio" name="callTime" value="Afternoon" checked="" class="contact-radio">
-                       <span class="contact-radio__text">Afternoon</span>
-                     </label>
-                     <label class="contact-radiowrapper">
-                       <input type="radio" name="callTime" value="Evening" checked="" class="contact-radio">
-                       <span class="contact-radio__text">Evening</span>
+                     <label class="contact-checkbox">
+                       <input  class="contact-checkbox__input" type="radio" name="eventType" value="photoshoot">
+                       <span class="contact-checkbox__title">Photoshoot</span>
                      </label>
                    </div>
                  </div>
-               </div>
-      
-              <!-- Second form section -->
-               <div class="js-second-form">
-                 <div class="contact-formcontent">
-                   <button class="contact-back js-back-btn">Back</button>
-       
+  
+                 <div class="contact-formitem">
+                   <p class="contact-formitem__title">Event Date</p>
                    <div class="contact-formitem">
-                     <p class="contact-formitem__title">Bridal Service</p>
-                     <div class="contact-checkboxwrapper">
-                       <label class="contact-checkbox">
-                         <input class="contact-checkbox__input" type="checkbox" name="bridalService" value="makeup" checked>
-                         <span class="contact-checkbox__title">Makeup</span>
-                       </label>
-                       <label class="contact-checkbox">
-                         <input class="contact-checkbox__input" type="checkbox" name="bridalService" value="hairstyle">
-                         <span class="contact-checkbox__title">Hairstyle</span>
-                       </label>
-                     </div>
-                   </div>
-                   
-                   <div class="contact-formitem">
-                     <label class="contact-formitem">
-                       <span class="contact-formitem__title">Event Location</span>
-                       <div class="contact-searchinput">
-                         <input type="text" name="eventLocation" id="name" placeholder="Search address" class="contact-input">
-                       </div>
-                     </label>
+                     <input type="date" name="eventDate" id="dob" placeholder="Select Date" class="contact-forminput event-date">
                      <label class="contact-simplecheckboxwrapper">
-                       <input type="checkbox" class="contact-simplecheckbox">
+                       <input type="checkbox" class="contact-simplecheckbox event-date-decide">
                        <span class="contact-simplecheckbox__text">Not decided</span>
                      </label>
                    </div>
-                   
+                 </div>
+  
+                 <div class="contact-formitem">
+                   <p class="contact-formitem__title">Event Time</p>
                    <div class="contact-formitem">
-                     <p class="contact-formitem__title">Premium service</p>
-                     <div class="contact-simplecheckboxcontainer">
-                       <label class="contact-simplecheckboxwrapper">
-                         <input type="checkbox" class="contact-simplecheckbox" name="premium" value="Deep skin cleansing">
-                         <span class="contact-simplecheckbox__text">Deep skin cleansing</span>
-                       </label>
-                       <label class="contact-simplecheckboxwrapper">
-                         <input type="checkbox" class="contact-simplecheckbox" name="premium" value="Bleach body hair">
-                         <span class="contact-simplecheckbox__text">Bleach body hair</span>
-                       </label>
-                       <label class="contact-simplecheckboxwrapper">
-                         <input type="checkbox" class="contact-simplecheckbox" name="premium" value="Hydromassage">
-                         <span class="contact-simplecheckbox__text">Hydromassage</span>
-                       </label>
-                       <label class="contact-simplecheckboxwrapper">
-                         <input type="checkbox" class="contact-simplecheckbox" name="premium" value="Hair Moisture">
-                         <span class="contact-simplecheckbox__text">Hair Moisture</span>
-                       </label>
-                       <label class="contact-simplecheckboxwrapper">
-                         <input type="checkbox" class="contact-simplecheckbox" name="premium" value="Waxing">
-                         <span class="contact-simplecheckbox__text">Waxing</span>
-                       </label>
-                       <label class="contact-simplecheckboxwrapper">
-                         <input type="checkbox" class="contact-simplecheckbox" name="premium" value="Foot and hand SPA">
-                         <span class="contact-simplecheckbox__text">Foot and hand SPA</span>
-                       </label>
-                       <label class="contact-simplecheckboxwrapper">
-                         <input type="checkbox" class="contact-simplecheckbox" name="premium" value="Relaxing massage">
-                         <span class="contact-simplecheckbox__text">Relaxing massage</span>
-                       </label>
-                       <label class="contact-simplecheckboxwrapper">
-                         <input type="checkbox" class="contact-simplecheckbox" name="premium" value="Gommage (body exfoliation and hydration)">
-                         <span class="contact-simplecheckbox__text">Gommage (body exfoliation and hydration)</span>
-                       </label>
-                     </div>
+                     <select name="eventTime" id="eventTime" class="contact-selectbox event-time">
+                       <option value="Full day" selected>Full day</option>
+                       <option value="Evening">Evening</option>
+                       <option value="Midnight">Midnight</option>
+                     </select>
+                     <label class="contact-simplecheckboxwrapper">
+                       <input type="checkbox" class="contact-simplecheckbox event-time-decide">
+                       <span class="contact-simplecheckbox__text">Not decided</span>
+                     </label>
                    </div>
-       
-                   <div class="contact-formitem">
-                     <p class="contact-formitem__title">Anyone else need service?</p>
-       
-                     <!-- Wedding -->
-                     <div class="contact-person js-wedding-form">
-                       <div class="contact-person__header">
-                         <p class="contact-subtitle">Groom</p>
-                         <div class="contact-countwrapper">
-                           <button class="contact-count js-count-down" type="button">－</button>
-                           <input type="text" value="0" class="contact-countinput js-count-text js-groom-count" name="groomCount">
-                           <button class="contact-count js-count-up" type="button">＋</button>
-                         </div>
-                       </div>
-                       <div class="contact-person__checkbox">
-                         <label class="contact-simplecheckboxwrapper">
-                           <input type="checkbox" class="contact-simplecheckbox" name="groom" value="Makeup">
-                           <span class="contact-simplecheckbox__text">Makeup</span>
-                         </label>
-                       </div>
+                 </div>
+  
+                 <label class="contact-formitem">
+                   <span class="contact-formitem__title">Name</span>
+                   <input type="text" name="name" id="name" placeholder="Your name" class="contact-input">
+                 </label>
+  
+                 <div class="contact-formitem">
+                   <p class="contact-formitem__title">Contact</p>
+                   <label class="contact-radiowrapper">
+                     <div class="contact-radio__call">
+                       <input type="radio" name="contact" value="call" checked="" class="contact-radio">
+                       <span class="contact-radio__text call">Call</span>
                      </div>
-       
-                     <div class="contact-person js-wedding-form">
-                       <div class="contact-person__header">
-                         <p class="contact-subtitle">Bridesmaid</p>
-                         <div class="contact-countwrapper">
-                           <button class="contact-count js-count-down" type="button">－</button>
-                           <input type="text" value="0" class="contact-countinput js-count-text js-bridesmaid-count" name="bridesmaidCount">
-                           <button class="contact-count js-count-up" type="button">＋</button>
-                         </div>
-                       </div>
-                       <div class="contact-person__checkbox">
-                         <label class="contact-simplecheckboxwrapper">
-                           <input type="checkbox" class="contact-simplecheckbox" name="bridesmaid" value="Hairstyle">
-                           <span class="contact-simplecheckbox__text">Hairstyle</span>
-                         </label>
-                         <label class="contact-simplecheckboxwrapper">
-                           <input type="checkbox" class="contact-simplecheckbox" name="bridesmaid" value="Makeup">
-                           <span class="contact-simplecheckbox__text">Makeup</span>
-                         </label>
-                       </div>
+                     <div class="contact-callinput">
+                       <select name="country" id="country" class="contact-callinput__country">
+                         <option value="+1" selected name="country">+1</option>
+                         <option value="+2" name="country">+2</option>
+                         <option value="+3" name="country">+3</option>
+                       </select>
+                       <input type="tel" placeholder="Your mobile number" class="contact-callinput__tel" name="tel">
                      </div>
-       
-                     <div class="contact-person js-wedding-form">
-                       <div class="contact-person__header">
-                         <p class="contact-subtitle">Flower girl</p>
-                         <div class="contact-countwrapper">
-                           <button class="contact-count js-count-down" type="button">－</button>
-                           <input type="text" value="0" class="contact-countinput js-count-text js-flower-count" name="flowerCount">
-                           <button class="contact-count js-count-up" type="button">＋</button>
-                         </div>
-                       </div>
-                       <div class="contact-person__checkbox">
-                         <label class="contact-simplecheckboxwrapper">
-                           <input type="checkbox" class="contact-simplecheckbox" name="flower" value="Hairstyle">
-                           <span class="contact-simplecheckbox__text">Hairstyle</span>
-                         </label>
-                         <label class="contact-simplecheckboxwrapper">
-                           <input type="checkbox" class="contact-simplecheckbox" name="flower" value="Makeup">
-                           <span class="contact-simplecheckbox__text">Makeup</span>
-                         </label>
-                       </div>
-                     </div>
-                     
-                     <!-- Party -->
-                     <div class="contact-person js-party-form">
-                       <div class="contact-person__header">
-                         <p class="contact-subtitle">Woman</p>
-                         <div class="contact-countwrapper ">
-                           <button class="contact-count js-count-down" type="button">－</button>
-                           <input type="text" value="0" class="contact-countinput js-count-text js-woman-count" name="womanCount">
-                           <button class="contact-count js-count-up" type="button">＋</button>
-                         </div>
-                       </div>
-                       <div class="contact-person__checkbox">
-                         <label class="contact-simplecheckboxwrapper">
-                           <input type="checkbox" class="contact-simplecheckbox" name="woman" value="Hairstyle">
-                           <span class="contact-simplecheckbox__text">Hairstyle</span>
-                         </label>
-                         <label class="contact-simplecheckboxwrapper">
-                           <input type="checkbox" class="contact-simplecheckbox" name="woman" value="Makeup">
-                           <span class="contact-simplecheckbox__text">Makeup</span>
-                         </label>
-                       </div>
-                     </div>
-       
-                     <div class="contact-person js-party-form">
-                       <div class="contact-person__header">
-                         <p class="contact-subtitle">Man</p>
-                         <div class="contact-countwrapper">
-                           <button class="contact-count js-count-down" type="button">－</button>
-                           <input type="text" value="0" class="contact-countinput js-count-text js-man-count" name="manCount">
-                           <button class="contact-count js-count-up" type="button">＋</button>
-                         </div>
-                       </div>
-                       <div class="contact-person__checkbox">
-                         <label class="contact-simplecheckboxwrapper">
-                           <input type="checkbox" class="contact-simplecheckbox" name="man" value="Makeup">
-                           <span class="contact-simplecheckbox__text">Makeup</span>
-                         </label>
-                       </div>
-                     </div>
-       
-                   </div>
-                   
-                   <label class="contact-formitem">
-                     <span class="contact-formitem__title">Anything you want us to know?</span>
-                     <textarea name="message" id="" placeholder="Your message" class="contact-textarea" rows="10"></textarea>
                    </label>
-       
+                   <label class="contact-radiowrapper">
+                     <input type="radio" name="contact" value="whatsApp" checked="" class="contact-radio">
+                     <span class="contact-radio__text">WhatsApp</span>
+                   </label>
+                   <label class="contact-radiowrapper">
+                     <input type="radio" name="contact" value="sms" checked="" class="contact-radio">
+                     <span class="contact-radio__text">SMS</span>
+                   </label>
+                   <label class="contact-radiowrapper">
+                      <div class="contact-radio__call">
+                        <input type="radio" name="contact" value="email" checked="" class="contact-radio">
+                        <span class="contact-radio__text email">Email</span>
+                      </div>
+                     <input type="email" name="email" value="" placeholder="Your email address" class="contact-input email contact-callinput__email">
+                   </label>
+                 </div>
+  
+  
+                 <!-- Wedding -->
+                 <div class="contact-formitem js-wedding-form">
+                   <p class="contact-formitem__title">When do you want us to call?</p>
+                   <label class="contact-radiowrapper">
+                     <input type="radio" name="callTime" value="I don’t mind" checked="" class="contact-radio">
+                     <span class="contact-radio__text">I don’t mind</span>
+                   </label>
+                   <label class="contact-radiowrapper">
+                     <input type="radio" name="callTime" value="Morning" checked="" class="contact-radio">
+                     <span class="contact-radio__text">Morning</span>
+                   </label>
+                   <label class="contact-radiowrapper">
+                     <input type="radio" name="callTime" value="Afternoon" checked="" class="contact-radio">
+                     <span class="contact-radio__text">Afternoon</span>
+                   </label>
+                   <label class="contact-radiowrapper">
+                     <input type="radio" name="callTime" value="Evening" checked="" class="contact-radio">
+                     <span class="contact-radio__text">Evening</span>
+                   </label>
                  </div>
                </div>
-      
-              <button class="contact-button js-next-btn">Next</button>
-              <button type="submit" class="contact-button js-submit-btn">Submit</button>
-            </form>
-      
-            <!-- Thanks -->
-             <section class="thanks-container js-thanks">
-              <h3 class="thanks-header__title">Thanks <span class="js-thanks-name"></span>,<br>we will contact you soon!</h3>
-              <p class="thanks-header__text">We will call <span class="js-thanks-country"></span>-<span class="js-thanks-tel"></span> to confirm the appointment details with you.</p>
-      
-              <!-- Wedding and Party -->
-              <div class="thanks-wrapper">
-                <img src="./assets/contact/thanks.png" alt="thanks" class="thanks-wrapper__image">
-                <div class="thanks-estimate">
-                  <p class="thanks-estimate__text">Your estimated price will be:</p>
-                  <h4 class="thanks-estimate__title">CAD 1,000 - 1,200</h4>
-                </div>
-                <div class="thanks-content">
-                  <div class="thanks-contentitem">
-                    <p class="thanks-subtitle">Basic services</p>
-                    <div class="thanks-contentitem__item">
-                      <p class="thanks-contentitem__text"> - Exclusive room</p>
-                      <p class="thanks-contentitem__text"> - Hairstyle</p>
-                      <p class="thanks-contentitem__text"> - Hairstyle trial</p>
-                      <p class="thanks-contentitem__text"> - Makeup</p>
-                      <p class="thanks-contentitem__text"> - Makeup trial</p>
-                      <p class="thanks-contentitem__text"> - Manicure</p>
-                      <p class="thanks-contentitem__text"> - Pedicure</p>
-                      <p class="thanks-contentitem__text"> - Eyebrow design. </p>
-                      <p class="thanks-contentitem__text"> - Coffee or tea with cake</p>
-                      <p class="thanks-contentitem__text"> - Bathtub. </p>
-                      <p class="thanks-contentitem__text"> - Help with getting dressed</p>
-                    </div>
-                  </div>
-                  <div class="thanks-contentitem__wrapper">
-                    <div class="thanks-contentitem">
-                      <p class="thanks-subtitle">Premium services</p>
-                      <div class="thanks-contentitem__item js-premium-result"></div>
-                    </div>
-                    <div class="thanks-contentitem">
-                      <p class="thanks-subtitle js-thanks-additional">Additional attendees</p>
-                      <div class="thanks-contentitem__item js-attendees-result"></div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Common -->
-                <div class="thanks-footer">
-                  <button class="contact-button">Share</button>
-                  <div  class="thanks-footer__content">
-                    <img src="./assets/contact/CB_Logo.svg" alt="logo" class="thanks-footer__image">
-                    <div class="thanks-sns">
-                      <div class="contact-sns">
-                        <img  class="contact-sns__icon" src="./assets/contact/icon_phone.svg" alt="phone number">
-                        <p class="contact-sns__text">+1 0000000000</p>
-                      </div>
-                      <div class="contact-sns">
-                        <img class="contact-sns__icon" src="./assets/contact/icon_whatsapp.svg" alt="whatsapp">
-                        <p class="contact-sns__text">+1 0000000000</p>
-                      </div>
-                      <div class="contact-sns">
-                        <img class="contact-sns__icon" src="./assets/contact/icon_instagram.svg" alt="instagram">
-                        <p class="contact-sns__text">carlabeatrizs_</p>
-                      </div>
-                    </div>
-                  </div>
+             </div>
+  
+            <!-- Second form section -->
+             <div class="js-second-form">
+               <div class="contact-formcontent">
+                 <button class="contact-back js-back-btn">Back</button>
+  
+                 <div class="contact-formitem">
+                   <p class="contact-formitem__title">Bridal Service</p>
+                   <div class="contact-checkboxwrapper">
+                     <label class="contact-checkbox">
+                       <input class="contact-checkbox__input" type="checkbox" name="bridalService" value="makeup" checked>
+                       <span class="contact-checkbox__title">Makeup</span>
+                     </label>
+                     <label class="contact-checkbox">
+                       <input class="contact-checkbox__input" type="checkbox" name="bridalService" value="hairstyle">
+                       <span class="contact-checkbox__title">Hairstyle</span>
+                     </label>
+                   </div>
                  </div>
+  
+                 <div class="contact-formitem">
+                   <label class="contact-formitem">
+                     <span class="contact-formitem__title">Event Location</span>
+                     <div class="contact-searchinput">
+                       <input type="text" name="eventLocation" id="name" placeholder="Search address" class="contact-input event-location">
+                     </div>
+                   </label>
+                   <label class="contact-simplecheckboxwrapper">
+                     <input type="checkbox" class="contact-simplecheckbox event-location-decide">
+                     <span class="contact-simplecheckbox__text">Not decided</span>
+                   </label>
+                 </div>
+  
+                 <div class="contact-formitem">
+                   <p class="contact-formitem__title">Premium service</p>
+                   <div class="contact-simplecheckboxcontainer">
+                     <label class="contact-simplecheckboxwrapper">
+                       <input type="checkbox" class="contact-simplecheckbox" name="premium" value="Deep skin cleansing">
+                       <span class="contact-simplecheckbox__text">Deep skin cleansing</span>
+                     </label>
+                     <label class="contact-simplecheckboxwrapper">
+                       <input type="checkbox" class="contact-simplecheckbox" name="premium" value="Bleach body hair">
+                       <span class="contact-simplecheckbox__text">Bleach body hair</span>
+                     </label>
+                     <label class="contact-simplecheckboxwrapper">
+                       <input type="checkbox" class="contact-simplecheckbox" name="premium" value="Hydromassage">
+                       <span class="contact-simplecheckbox__text">Hydromassage</span>
+                     </label>
+                     <label class="contact-simplecheckboxwrapper">
+                       <input type="checkbox" class="contact-simplecheckbox" name="premium" value="Hair Moisture">
+                       <span class="contact-simplecheckbox__text">Hair Moisture</span>
+                     </label>
+                     <label class="contact-simplecheckboxwrapper">
+                       <input type="checkbox" class="contact-simplecheckbox" name="premium" value="Waxing">
+                       <span class="contact-simplecheckbox__text">Waxing</span>
+                     </label>
+                     <label class="contact-simplecheckboxwrapper">
+                       <input type="checkbox" class="contact-simplecheckbox" name="premium" value="Foot and hand SPA">
+                       <span class="contact-simplecheckbox__text">Foot and hand SPA</span>
+                     </label>
+                     <label class="contact-simplecheckboxwrapper">
+                       <input type="checkbox" class="contact-simplecheckbox" name="premium" value="Relaxing massage">
+                       <span class="contact-simplecheckbox__text">Relaxing massage</span>
+                     </label>
+                     <label class="contact-simplecheckboxwrapper">
+                       <input type="checkbox" class="contact-simplecheckbox" name="premium" value="Gommage (body exfoliation and hydration)">
+                       <span class="contact-simplecheckbox__text">Gommage (body exfoliation and hydration)</span>
+                     </label>
+                   </div>
+                 </div>
+  
+                 <div class="contact-formitem">
+                   <p class="contact-formitem__title">Anyone else need service?</p>
+  
+                   <!-- Wedding -->
+                   <div class="contact-person js-wedding-form">
+                     <div class="contact-person__header">
+                       <p class="contact-subtitle">Groom</p>
+                       <div class="contact-countwrapper">
+                         <button class="contact-count js-count-down" type="button">－</button>
+                         <input type="text" value="0" class="contact-countinput js-count-text js-groom-count" name="groomCount">
+                         <button class="contact-count js-count-up" type="button">＋</button>
+                       </div>
+                     </div>
+                     <div class="contact-person__checkbox">
+                       <label class="contact-simplecheckboxwrapper">
+                         <input type="checkbox" class="contact-simplecheckbox" name="groom" value="Makeup">
+                         <span class="contact-simplecheckbox__text">Makeup</span>
+                       </label>
+                     </div>
+                   </div>
+  
+                   <div class="contact-person js-wedding-form">
+                     <div class="contact-person__header">
+                       <p class="contact-subtitle">Bridesmaid</p>
+                       <div class="contact-countwrapper">
+                         <button class="contact-count js-count-down" type="button">－</button>
+                         <input type="text" value="0" class="contact-countinput js-count-text js-bridesmaid-count" name="bridesmaidCount">
+                         <button class="contact-count js-count-up" type="button">＋</button>
+                       </div>
+                     </div>
+                     <div class="contact-person__checkbox">
+                       <label class="contact-simplecheckboxwrapper">
+                         <input type="checkbox" class="contact-simplecheckbox" name="bridesmaid" value="Hairstyle">
+                         <span class="contact-simplecheckbox__text">Hairstyle</span>
+                       </label>
+                       <label class="contact-simplecheckboxwrapper">
+                         <input type="checkbox" class="contact-simplecheckbox" name="bridesmaid" value="Makeup">
+                         <span class="contact-simplecheckbox__text">Makeup</span>
+                       </label>
+                     </div>
+                   </div>
+  
+                   <div class="contact-person js-wedding-form">
+                     <div class="contact-person__header">
+                       <p class="contact-subtitle">Flower girl</p>
+                       <div class="contact-countwrapper">
+                         <button class="contact-count js-count-down" type="button">－</button>
+                         <input type="text" value="0" class="contact-countinput js-count-text js-flower-count" name="flowerCount">
+                         <button class="contact-count js-count-up" type="button">＋</button>
+                       </div>
+                     </div>
+                     <div class="contact-person__checkbox">
+                       <label class="contact-simplecheckboxwrapper">
+                         <input type="checkbox" class="contact-simplecheckbox" name="flower" value="Hairstyle">
+                         <span class="contact-simplecheckbox__text">Hairstyle</span>
+                       </label>
+                       <label class="contact-simplecheckboxwrapper">
+                         <input type="checkbox" class="contact-simplecheckbox" name="flower" value="Makeup">
+                         <span class="contact-simplecheckbox__text">Makeup</span>
+                       </label>
+                     </div>
+                   </div>
+  
+                   <!-- Party -->
+                   <div class="contact-person js-party-form">
+                     <div class="contact-person__header">
+                       <p class="contact-subtitle">Woman</p>
+                       <div class="contact-countwrapper ">
+                         <button class="contact-count js-count-down" type="button">－</button>
+                         <input type="text" value="0" class="contact-countinput js-count-text js-woman-count" name="womanCount">
+                         <button class="contact-count js-count-up" type="button">＋</button>
+                       </div>
+                     </div>
+                     <div class="contact-person__checkbox">
+                       <label class="contact-simplecheckboxwrapper">
+                         <input type="checkbox" class="contact-simplecheckbox" name="woman" value="Hairstyle">
+                         <span class="contact-simplecheckbox__text">Hairstyle</span>
+                       </label>
+                       <label class="contact-simplecheckboxwrapper">
+                         <input type="checkbox" class="contact-simplecheckbox" name="woman" value="Makeup">
+                         <span class="contact-simplecheckbox__text">Makeup</span>
+                       </label>
+                     </div>
+                   </div>
+  
+                   <div class="contact-person js-party-form">
+                     <div class="contact-person__header">
+                       <p class="contact-subtitle">Man</p>
+                       <div class="contact-countwrapper">
+                         <button class="contact-count js-count-down" type="button">－</button>
+                         <input type="text" value="0" class="contact-countinput js-count-text js-man-count" name="manCount">
+                         <button class="contact-count js-count-up" type="button">＋</button>
+                       </div>
+                     </div>
+                     <div class="contact-person__checkbox">
+                       <label class="contact-simplecheckboxwrapper">
+                         <input type="checkbox" class="contact-simplecheckbox" name="man" value="Makeup">
+                         <span class="contact-simplecheckbox__text">Makeup</span>
+                       </label>
+                     </div>
+                   </div>
+  
+                 </div>
+  
+                 <label class="contact-formitem">
+                   <span class="contact-formitem__title">Anything you want us to know?</span>
+                   <textarea name="message" id="" placeholder="Your message" class="contact-textarea" rows="10"></textarea>
+                 </label>
+  
+               </div>
+             </div>
+  
+            <button class="contact-button js-next-btn">Next</button>
+            <button type="submit" class="contact-button js-submit-btn">Submit</button>
+          </form>
+  
+          <!-- Thanks -->
+           <section class="thanks-container js-thanks">
+            <h3 class="thanks-header__title">Thanks <span class="js-thanks-name"></span>,<br>we will contact you soon!</h3>
+            <p class="thanks-header__text">We will call <span class="js-thanks-country"></span>-<span class="js-thanks-tel"></span> to confirm the appointment details with you.</p>
+  
+            <!-- Wedding and Party -->
+            <div class="thanks-wrapper">
+              <img src="./assets/contact/thanks.png" alt="thanks" class="thanks-wrapper__image">
+              <div class="thanks-estimate js-noPhotoshoot">
+                <p class="thanks-estimate__text">Your estimated price will be:</p>
+                <h4 class="thanks-estimate__title">CAD 1,000 - 1,200</h4>
               </div>
-      
-      
-             </section>
-      
-          </div>
-          <input id="classes" type="radio" name="tab_item" class="contact-tabradio" /><label class="contact-tabItem" for="classes">Classes</label>
-          <div class="contact-content">
-            <p>Nothing!</p>
-          </div>
+              <div class="thanks-content js-noPhotoshoot">
+                <div class="thanks-contentitem">
+                  <p class="thanks-subtitle">Basic services</p>
+                  <div class="thanks-contentitem__item">
+                    <p class="thanks-contentitem__text"> - Exclusive room</p>
+                    <p class="thanks-contentitem__text"> - Hairstyle</p>
+                    <p class="thanks-contentitem__text"> - Hairstyle trial</p>
+                    <p class="thanks-contentitem__text"> - Makeup</p>
+                    <p class="thanks-contentitem__text"> - Makeup trial</p>
+                    <p class="thanks-contentitem__text"> - Manicure</p>
+                    <p class="thanks-contentitem__text"> - Pedicure</p>
+                    <p class="thanks-contentitem__text"> - Eyebrow design. </p>
+                    <p class="thanks-contentitem__text"> - Coffee or tea with cake</p>
+                    <p class="thanks-contentitem__text"> - Bathtub. </p>
+                    <p class="thanks-contentitem__text"> - Help with getting dressed</p>
+                  </div>
+                </div>
+                <div class="thanks-contentitem__wrapper">
+                  <div class="thanks-contentitem">
+                    <p class="thanks-subtitle">Premium services</p>
+                    <div class="thanks-contentitem__item js-premium-result"></div>
+                  </div>
+                  <div class="thanks-contentitem">
+                    <p class="thanks-subtitle js-thanks-additional">Additional attendees</p>
+                    <div class="thanks-contentitem__item js-attendees-result"></div>
+                  </div>
+                </div>
+              </div>
+              <!-- Common -->
+              <div class="thanks-footer">
+                <button class="contact-button">Share</button>
+                <div  class="thanks-footer__content">
+                  <img src="./assets/contact/CB_Logo.svg" alt="logo" class="thanks-footer__image">
+                  <div class="thanks-sns">
+                    <div class="contact-sns">
+                      <img  class="contact-sns__icon" src="./assets/contact/icon_phone.svg" alt="phone number">
+                      <p class="contact-sns__text">+1 0000000000</p>
+                    </div>
+                    <div class="contact-sns">
+                      <img class="contact-sns__icon" src="./assets/contact/icon_whatsapp.svg" alt="whatsapp">
+                      <p class="contact-sns__text">+1 0000000000</p>
+                    </div>
+                    <div class="contact-sns">
+                      <img class="contact-sns__icon" src="./assets/contact/icon_instagram.svg" alt="instagram">
+                      <p class="contact-sns__text">carlabeatrizs_</p>
+                    </div>
+                  </div>
+                </div>
+               </div>
+            </div>
+  
+  
+           </section>
+  
         </div>
+        <input id="classes" type="radio" name="tab_item" class="contact-tabradio" /><label class="contact-tabItem" for="classes">Classes</label>
+        <div class="contact-content">
+          <p>Nothing!</p>
+        </div>
+      </div>
     </section>
     <footer>
       <img class="footer-logo" src="../assets/header/logo.png" alt="Logo" width="126">
