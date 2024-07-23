@@ -26,8 +26,6 @@ const allVideos = document.querySelectorAll(".all-videos")
 
 //for mobile carrousel 
 photoCarrousel.forEach((pic, i) =>{
-    console.log(pic)
-    console.log(i)
     pic.addEventListener("click", () =>{
         if (i === 0){
             popUp.style.display = "block"

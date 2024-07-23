@@ -162,40 +162,50 @@ body {
 body{
   .container{
     .message-menu{
-      width: 60px;
-      position: absolute;
-      display: flex;
-      justify-content: end;
-      align-items: end;
-      width: 100%;
-      transition: all 1s linear;
-      .toggle-menu{
-          position: absolute;
-          display: flex;
-          flex-direction: column;
-          top: calc(50% - 180px); 
-          right: 0;
-          z-index: -1;
-          opacity: 0%;
-          transition: all .3s linear;
-          &.open-menu{
-              opacity:100%;
-              z-index: 1;
-          }
-      }
-      #message-logo{
-          position: absolute;
-          right: 0; 
-          top: 50%;
-          opacity: 100%;
-          transition: all .3s linear;
-      }
-      &:hover{
-          cursor:pointer;
-      }
-      svg{
-          width: 60px;
-          margin:0;
+      display: none; 
+    }
+  }
+}
+
+@media only screen and (min-width: 768px){
+  body{
+    .container{
+      .message-menu{
+        width: 60px;
+        position: absolute;
+        display: flex;
+        justify-content: end;
+        align-items: end;
+        width: 100%;
+        transition: all 1s linear;
+        .toggle-menu{
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            top: calc(50% - 180px); 
+            right: 0;
+            z-index: -1;
+            opacity: 0%;
+            transition: all .3s linear;
+            &.open-menu{
+                opacity:100%;
+                z-index: 1;
+            }
+        }
+        #message-logo{
+            position: absolute;
+            right: 0; 
+            top: 50%;
+            opacity: 100%;
+            transition: all .3s linear;
+        }
+        &:hover{
+            cursor:pointer;
+        }
+        svg{
+            width: 60px;
+            margin:0;
+        }
       }
     }
   }
